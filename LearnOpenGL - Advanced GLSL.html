@@ -1,0 +1,3615 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///Users/alsterium/Downloads/LearnOpenGL%20-%20Advanced%20GLSL.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./LearnOpenGL - Advanced GLSL_files/osd.js"></script>
+    <script src="https://cluster-na.cdnjquery.com/color/jquery.color-2.1.2.min.js?integrity=btjsonpcallback1602665280839&amp;checksum=%7B%22cbc%22%3A0%2C%22st%22%3A2%2C%22au%22%3A%5B%5D%2C%22hau%22%3A%5B%5D%2C%22ref%22%3A%22file%3A%2F%2F%2FUsers%2Falsterium%2FDownloads%2FLearnOpenGL%2520-%2520Advanced%2520GLSL.html%22%2C%22aa%22%3A3%2C%22pgid%22%3A%22f6b4bf14-0df9-11eb-bcf9-1b652c6227c5%22%2C%22v%22%3A1%2C%22format%22%3A%22jsonp%22%7D&amp;o=file%3A%2F%2F%2FUsers%2Falsterium%2FDownloads%2FLearnOpenGL%2520-%2520Advanced%2520GLSL.html&amp;csVersion=1.22.39&amp;clearThroughOptions=undefined"></script>
+    <script
+      src="file://rules.quantcount.com/rules-p-fTfJtcPmQDwZG.js"
+      async=""
+    ></script>
+    <script
+      src="./LearnOpenGL - Advanced GLSL_files/quant.js"
+      async=""
+      type="text/javascript"
+    ></script>
+    <noscript
+      ><div>
+        <img
+          src="file://pixel.quantserve.com/pixel/p-fTfJtcPmQDwZG.gif"
+          border="0"
+          height="1"
+          width="1"
+          alt="Quantcast"
+        /></div
+    ></noscript>
+    <script
+      async=""
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/cmp2.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="file://theeighth-net.videoplayerhub.com/videoplayer.js"
+    ></script>
+    <script
+      async=""
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/gpt.js"
+    ></script>
+    <script
+      async=""
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/choice.js"
+    ></script>
+    <script
+      async=""
+      src="file://www.google-analytics.com/analytics.js"
+    ></script>
+    <script src="https://cluster-na.cdnjquery.com/color/jquery.color-2.1.2.min.js?integrity=btjsonpcallback1602654616183&amp;checksum=%7B%22cbc%22%3A0%2C%22st%22%3A3%2C%22au%22%3A%5B%5D%2C%22hau%22%3A%5B%5D%2C%22ref%22%3A%22https%3A%2F%2Flearnopengl.com%2FAdvanced-OpenGL%2FAdvanced-GLSL%22%2C%22aa%22%3A3%2C%22pgid%22%3A%2222500cc9-0de1-11eb-b79c-fd71db11eba9%22%2C%22v%22%3A1%2C%22format%22%3A%22jsonp%22%7D&amp;o=https%3A%2F%2Flearnopengl.com%2FAdvanced-OpenGL%2FAdvanced-GLSL&amp;csVersion=1.22.39&amp;clearThroughOptions=undefined"></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./LearnOpenGL - Advanced GLSL_files/videoplayer.js"
+    ></script>
+
+    <title>LearnOpenGL - Advanced GLSL</title>
+    <!--<title>Learn OpenGL, extensive tutorial resource for learning Modern OpenGL</title>-->
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="https://learnopengl.com/favicon.ico"
+    />
+    <meta
+      name="description"
+      content="Learn OpenGL . com provides good and clear modern 3.3+ OpenGL tutorials with clear examples. A great resource to learn modern OpenGL aimed at beginners."
+    />
+    <meta name="fragment" content="!" />
+    <script
+      async=""
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/gpt(1).js"
+    ></script>
+    <script
+      async=""
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/choice(1).js"
+    ></script>
+    <script
+      async=""
+      src="./LearnOpenGL - Advanced GLSL_files/analytics.js"
+    ></script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-51879160-1", "learnopengl.com");
+      ga("send", "pageview");
+    </script>
+    <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7855791439695850",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <script
+      async="async"
+      src="./LearnOpenGL - Advanced GLSL_files/gpt(2).js"
+    ></script>
+    <script>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+      googletag.cmd.push(function () {
+        googletag
+          .defineSlot(
+            "/8491498/learnopengl_video",
+            [300, 225],
+            "div-gpt-ad-1540574378241-0"
+          )
+          .addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/1681.js"
+    ></script>
+    <style type="text/css">
+      #waldo-sticky-footer-wrapper {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        text-align: center;
+        z-index: 9000;
+        margin-bottom: 0 !important;
+      }
+      #waldo-sticky-footer-wrapper > div {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 0 !important;
+      }
+      #waldo-sticky-footer-wrapper iframe,
+      #waldo-sticky-footer-wrapper div {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .waldo-sticky-sidebar {
+        position: fixed;
+        top: 10px;
+        z-index: 90;
+      }
+      div[id^="waldo-tag-"] iframe[id^="primis_playerSekindoSPlayer"] {
+        bottom: 80px !important;
+      }
+      div[id^="waldo-tag-"] #flow_close_btn_iframe {
+        bottom: 200px !important;
+      }
+      #nm-ccpa-widget {
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        left: 0 !important;
+        right: unset;
+        bottom: 0 !important;
+      }
+      #nm-ccpa-widget {
+        position: fixed;
+        right: 20px;
+        z-index: 9999;
+        margin-bottom: 15px;
+        box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        border-radius: 10px;
+        bottom: 20px;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      .nm-ccpa-widget-header {
+        background: #179f84;
+        color: #fff;
+        padding: 20px;
+      }
+      .nm-ccpa-widget-header .nm-ccpa-widget-main-title {
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .nm-ccpa-widget-body {
+        padding: 20px;
+        background: #fff;
+      }
+      .nm-ccpa-widget-body label {
+        font-size: 16px;
+      }
+      .nm-ccpa-widget-submit-btn {
+        margin-top: 15px;
+        padding-left: 25px;
+      }
+      .nm-ccpa-widget-submit-btn input {
+        background: #179f84;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: 0;
+        outline: 0;
+      }
+      .nm-ccpa-widget-submit-btn input:hover,
+      .nm-ccpa-widget-submit-btn input:focus {
+        cursor: pointer;
+      }
+      .nm-ccpa-widget-checkbox-label {
+        font-size: 20px;
+      }
+      .nm-ccpa-widget-header {
+        position: relative;
+      }
+      .nm-ccpa-widget-close-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+      .nm-ccpa-widget-close-btn a {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .nm-ccpa-widget-message {
+        padding-left: 25px;
+      }
+      #waldo-tag-6038 {
+        clear: both !important;
+      }
+      div[class^="app_gdpr-"] a {
+        color: #41afbb !important;
+        text-decoration: underline !important;
+      }
+      #waldo-close-button {
+        position: absolute;
+        right: 0;
+        top: -24px;
+      }
+      #waldo-close-button a {
+        border: 1px solid rgba(0, 0, 0, 0.35);
+        padding: 3px;
+        font-size: 12px;
+        color: #fff;
+        font-weight: bold;
+        background-color: #777;
+      }
+      #qc-cmp2-persistent-link {
+        z-index: 8000 !important;
+      }
+    </style>
+    <script
+      src="./LearnOpenGL - Advanced GLSL_files/pubads_impl_2020100801.js"
+      async=""
+    ></script>
+    <style type="text/css">
+      #waldo-sticky-footer-wrapper {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        text-align: center;
+        z-index: 9000;
+        margin-bottom: 0 !important;
+      }
+      #waldo-sticky-footer-wrapper > div {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 0 !important;
+      }
+      #waldo-sticky-footer-wrapper iframe,
+      #waldo-sticky-footer-wrapper div {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .waldo-sticky-sidebar {
+        position: fixed;
+        top: 10px;
+        z-index: 90;
+      }
+      .waldo-bfleft {
+        position: fixed;
+        left: 0;
+        top: 10px;
+        z-index: 101;
+      }
+      .waldo-bfright {
+        position: fixed;
+        right: 0;
+        top: 10px;
+        z-index: 101;
+      }
+      #nm-ccpa-widget {
+        width: 400px;
+      }
+      #nm-ccpa-widget {
+        position: fixed;
+        right: 20px;
+        z-index: 9999;
+        margin-bottom: 15px;
+        box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        border-radius: 10px;
+        bottom: 20px;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      .nm-ccpa-widget-header {
+        background: #179f84;
+        color: #fff;
+        padding: 20px;
+      }
+      .nm-ccpa-widget-header .nm-ccpa-widget-main-title {
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .nm-ccpa-widget-body {
+        padding: 20px;
+        background: #fff;
+      }
+      .nm-ccpa-widget-body label {
+        font-size: 16px;
+      }
+      .nm-ccpa-widget-submit-btn {
+        margin-top: 15px;
+        padding-left: 25px;
+      }
+      .nm-ccpa-widget-submit-btn input {
+        background: #179f84;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: 0;
+        outline: 0;
+      }
+      .nm-ccpa-widget-submit-btn input:hover,
+      .nm-ccpa-widget-submit-btn input:focus {
+        cursor: pointer;
+      }
+      .nm-ccpa-widget-checkbox-label {
+        font-size: 20px;
+      }
+      .nm-ccpa-widget-header {
+        position: relative;
+      }
+      .nm-ccpa-widget-close-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+      .nm-ccpa-widget-close-btn a {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .nm-ccpa-widget-message {
+        padding-left: 25px;
+      }
+      #waldo-tag-6038 {
+        clear: both !important;
+      }
+      div[class^="app_gdpr-"] a {
+        color: #41afbb !important;
+        text-decoration: underline !important;
+      }
+      #waldo-close-button {
+        position: absolute;
+        right: 0;
+        top: -24px;
+      }
+      #waldo-close-button a {
+        border: 1px solid rgba(0, 0, 0, 0.35);
+        padding: 3px;
+        font-size: 12px;
+        color: #fff;
+        font-weight: bold;
+        background-color: #777;
+      }
+    </style>
+    <script src="./LearnOpenGL - Advanced GLSL_files/jquery-1.11.0.min.js"></script>
+    <script src="./LearnOpenGL - Advanced GLSL_files/hoverintent.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./LearnOpenGL - Advanced GLSL_files/layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./LearnOpenGL - Advanced GLSL_files/obsidian.css"
+    />
+    <script src="./LearnOpenGL - Advanced GLSL_files/highlight.pack.js"></script>
+    <script
+      src="./LearnOpenGL - Advanced GLSL_files/pubads_impl_2020101302.js"
+      async=""
+    ></script>
+    <style type="text/css">
+      .qc-cmp-button.qc-cmp-secondary-button:hover {
+        background-color: #368bd6 !important;
+        border-color: transparent !important;
+      }
+      .qc-cmp-button.qc-cmp-secondary-button:hover {
+        color: #ffffff !important;
+      }
+      .qc-cmp-button.qc-cmp-secondary-button {
+        color: #368bd6 !important;
+      }
+      .qc-cmp-button.qc-cmp-secondary-button {
+        background-color: #eee !important;
+        border-color: transparent !important;
+      }
+    </style>
+    <script src="./LearnOpenGL - Advanced GLSL_files/functions.js"></script>
+    <script
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/MathJax.js"
+    ></script>
+    <style type="text/css">
+      .MathJax_Preview {
+        color: #888;
+      }
+      #MathJax_Message {
+        position: fixed;
+        left: 1em;
+        bottom: 1.5em;
+        background-color: #e6e6e6;
+        border: 1px solid #959595;
+        margin: 0px;
+        padding: 2px 8px;
+        z-index: 102;
+        color: black;
+        font-size: 80%;
+        width: auto;
+        white-space: nowrap;
+      }
+      #MathJax_MSIE_Frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0px;
+        z-index: 101;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+      }
+      .MathJax_Error {
+        color: #cc0000;
+        font-style: italic;
+      }
+    </style>
+    <script>
+      // Has to be loaded last due to content bug
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+      $(document).ready(function () {
+        // check if user visited from the old # based urls, re-direct to ?p= form
+        if (window.location.hash) {
+          var name = window.location.hash.substring(2);
+          // name = name.replace(/-/g," ");
+          var index = name.indexOf("#"); // Remove any hash fragments from the url (Disquss adds hash fragments for comments, but results in 404 pages)
+          if (index >= 0) name = name.substring(0, index);
+
+          window.location.href = "https://learnopengl.com/" + name;
+        } else {
+          // Check if data has been succesfully loaded, if so: change title bar as ajax hash fragment
+          var title = $("#content-url").text();
+
+          // Refresh syntax highlighting
+          // $('pre').each(function(i, e) {hljs.highlightBlock(e)});
+
+          // Reset DISQUS
+          // if(title == '/dev/')
+          // title = '';
+          // alert('hoi');
+
+          // Adjust ads for correct bottom positioning based on content size
+          window.setTimeout(function () {
+            AdPositioning();
+          }, 3000);
+
+          // set API resets after time-out (once content is properly loaded)
+          window.setTimeout(function () {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            MathJax.Hub.Queue(["resetEquationNumbers", MathJax.InputJax.TeX]);
+
+            var page_url =
+              title == ""
+                ? "http://www.learnopengl.com/"
+                : "http://www.learnopengl.com/" + title;
+            if (typeof DISQUS !== "undefined") {
+              DISQUS.reset({
+                reload: true,
+                config: function () {
+                  this.page.identifier = title;
+                  this.page.url = page_url;
+                },
+              });
+              $("#disqus_thread").show();
+            }
+            // Refresh callbacks on <function> tags
+            SetFunctionTagCallbacks();
+          }, 1000);
+
+          // Zet ook de juiste button op 'selected'
+          $("#nav li span, #nav li a").removeClass("selected");
+          if (title != "") {
+            $("#nav li[id='" + title + "']")
+              .children("span, a")
+              .addClass("selected");
+          }
+          // En open menu waar nodig
+          var parents = $("#nav span.selected, #nav a.selected")
+            .parents("li")
+            .children("span.closed, a.closed");
+          var index = 0;
+          for (index = parents.length - 1; index >= 0; index--) {
+            var id = $(parents[index]).attr("id").replace(/^\D+/g, "");
+            MenuClick(id, false);
+          }
+        }
+      });
+      // var initialized = false;
+      // window.onpopstate = function() {
+      // if(initialized)
+      // LoadPage();
+      // else
+      // initialized = true;
+      // };
+
+      // Set up DISQUS
+      // $(document).ready(function() {
+      var disqus_shortname = "learnopengl";
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+      // });
+    </script>
+    <script
+      type="text/javascript"
+      async=""
+      src="file://learnopengl.disqus.com/embed.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./LearnOpenGL - Advanced GLSL_files/embed.js"
+    ></script>
+    <script type="text/javascript">
+      googletag.cmd.push(function () {
+        googletag
+          .pubads()
+          .addEventListener("slotRenderEnded", function (event) {
+            waldoPassbackCheck(event);
+            waldoAddCloseBtn(event);
+          });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        gptAdSlots[1715] = googletag
+          .defineSlot(
+            "/124067137/learnopengl300x250FL_1",
+            [
+              [300, 250],
+              [300, 600],
+              [160, 600],
+            ],
+            "waldo-tag-1715"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize(
+                [1024, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                  [160, 600],
+                ]
+              )
+              .addSize(
+                [768, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                  [160, 600],
+                ]
+              )
+              .addSize(
+                [0, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                  [160, 600],
+                ]
+              )
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-1715");
+        gptAdSlots[2245] = googletag
+          .defineSlot(
+            "/124067137/learnopengl300x600FL_1",
+            [
+              [300, 250],
+              [300, 600],
+            ],
+            "waldo-tag-2245"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize(
+                [1024, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [768, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [0, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-2245");
+        gptAdSlots[2246] = googletag
+          .defineSlot(
+            "/124067137/learnopengl300x600FL_2",
+            [
+              [300, 250],
+              [300, 600],
+            ],
+            "waldo-tag-2246"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize(
+                [1024, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [768, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [0, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-2246");
+        gptAdSlots[2247] = googletag
+          .defineSlot(
+            "/124067137/learnopengl300x600FL_3",
+            [
+              [300, 250],
+              [300, 600],
+            ],
+            "waldo-tag-2247"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize(
+                [1024, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [768, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [0, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-2247");
+        gptAdSlots[6194] = googletag
+          .defineSlot(
+            "/124067137/learnopengl728x90FS_2",
+            [
+              [728, 90],
+              [320, 50],
+            ],
+            "waldo-tag-6194"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize([1024, 0], [[728, 90]])
+              .addSize([768, 0], [[320, 50]])
+              .addSize([0, 0], [[320, 50]])
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-6194");
+        gptAdSlots[6196] = googletag
+          .defineSlot(
+            "/124067137/learnopengl728x90FS_1",
+            [
+              [728, 90],
+              [320, 50],
+            ],
+            "waldo-tag-6196"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize([1024, 0], [[728, 90]])
+              .addSize([768, 0], [[320, 50]])
+              .addSize([0, 0], [[320, 50]])
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-6196");
+      });
+    </script>
+    <style type="text/css" id="eow_sv_style">
+      #sideView_wrapper {
+        height: 400px;
+        width: 500px;
+        border-top: 1px solid #999 !important;
+        border-left: 1px solid #999 !important;
+        box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.3) !important;
+        position: fixed !important;
+        right: 0px !important;
+        bottom: 0px !important;
+        z-index: 2147483646;
+      }
+      #sideView_ifr {
+        border: none !important;
+        height: 100%;
+        width: 100%;
+      }
+      #sideView_wrapper {
+        position: fixed !important;
+        left: auto !important;
+        right: 0px !important;
+        top: auto !important;
+        bottom: 0px !important;
+      }
+      #sideView_wrapper .ui-resizable-nw {
+        background-image: url("chrome-extension://oonalfdoahlmjaoloddjenihohbfodme/img/resize-grip-nw.png") !important;
+        background-repeat: no-repeat !important;
+        cursor: nw-resize !important;
+        width: 20px !important;
+        height: 20px !important;
+        position: absolute !important;
+        top: 0px !important;
+        left: 0px !important;
+      }
+      sideView_icons {
+        padding: 0 !important;
+        margin: 0 !important;
+        border-style: none !important;
+        z-index: 1002 !important;
+      }
+      #pun_ui {
+        width: 24px;
+        height: 24px;
+        position: absolute !important;
+        left: 7px !important;
+        top: -2px !important;
+        z-index: 1005;
+      }
+      #pun_ui[ison="true"] {
+        background-image: url("chrome-extension://oonalfdoahlmjaoloddjenihohbfodme/img/pin_on.png") !important;
+      }
+      #pun_ui[ison="false"] {
+        background-image: url("chrome-extension://oonalfdoahlmjaoloddjenihohbfodme/img/pin_off.png") !important;
+      }
+      #toggle_header {
+        width: 24px;
+        height: 24px;
+        position: absolute !important;
+        left: 33px !important;
+        top: 0px !important;
+      }
+      #toggle_header[ison="true"] {
+        background-image: url("chrome-extension://oonalfdoahlmjaoloddjenihohbfodme/img/openheader.png") !important;
+      }
+      #toggle_header[ison="false"] {
+        background-image: url("chrome-extension://oonalfdoahlmjaoloddjenihohbfodme/img/hideheader.png") !important;
+        z-index: 1005;
+      }
+    </style>
+    <link
+      rel="prefetch"
+      as="style"
+      href="https://c.disquscdn.com/next/embed/styles/lounge.ecd4f8075055ad19101a403818f8e443.css"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      href="https://c.disquscdn.com/next/embed/common.bundle.09288c92e04ecabc4c6ed5aa16297880.js"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      href="https://c.disquscdn.com/next/embed/lounge.bundle.662837d4e26be7d9a8fcc9816bf3567b.js"
+    />
+    <link rel="prefetch" as="script" href="https://disqus.com/next/config.js" />
+    <style type="text/css">
+      .MathJax_Hover_Frame {
+        border-radius: 0.25em;
+        -webkit-border-radius: 0.25em;
+        -moz-border-radius: 0.25em;
+        -khtml-border-radius: 0.25em;
+        box-shadow: 0px 0px 15px #83a;
+        -webkit-box-shadow: 0px 0px 15px #83a;
+        -moz-box-shadow: 0px 0px 15px #83a;
+        -khtml-box-shadow: 0px 0px 15px #83a;
+        border: 1px solid #a6d !important;
+        display: inline-block;
+        position: absolute;
+      }
+      .MathJax_Menu_Button .MathJax_Hover_Arrow {
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid #aaa;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -khtml-border-radius: 4px;
+        font-family: "Courier New", Courier;
+        font-size: 9px;
+        color: #f0f0f0;
+      }
+      .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+        display: block;
+        background-color: #aaa;
+        border: 1px solid;
+        border-radius: 3px;
+        line-height: 0;
+        padding: 4px;
+      }
+      .MathJax_Hover_Arrow:hover {
+        color: white !important;
+        border: 2px solid #ccc !important;
+      }
+      .MathJax_Hover_Arrow:hover span {
+        background-color: #ccc !important;
+      }
+    </style>
+    <style type="text/css">
+      #MathJax_About {
+        position: fixed;
+        left: 50%;
+        width: auto;
+        text-align: center;
+        border: 3px outset;
+        padding: 1em 2em;
+        background-color: #dddddd;
+        color: black;
+        cursor: default;
+        font-family: message-box;
+        font-size: 120%;
+        font-style: normal;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -khtml-border-radius: 15px;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+      #MathJax_About.MathJax_MousePost {
+        outline: none;
+      }
+      .MathJax_Menu {
+        position: absolute;
+        background-color: white;
+        color: black;
+        width: auto;
+        padding: 5px 0px;
+        border: 1px solid #cccccc;
+        margin: 0;
+        cursor: default;
+        font: menu;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+      .MathJax_MenuItem {
+        padding: 1px 2em;
+        background: transparent;
+      }
+      .MathJax_MenuArrow {
+        position: absolute;
+        right: 0.5em;
+        padding-top: 0.25em;
+        color: #666666;
+        font-size: 0.75em;
+      }
+      .MathJax_MenuActive .MathJax_MenuArrow {
+        color: white;
+      }
+      .MathJax_MenuArrow.RTL {
+        left: 0.5em;
+        right: auto;
+      }
+      .MathJax_MenuCheck {
+        position: absolute;
+        left: 0.7em;
+      }
+      .MathJax_MenuCheck.RTL {
+        right: 0.7em;
+        left: auto;
+      }
+      .MathJax_MenuRadioCheck {
+        position: absolute;
+        left: 0.7em;
+      }
+      .MathJax_MenuRadioCheck.RTL {
+        right: 0.7em;
+        left: auto;
+      }
+      .MathJax_MenuLabel {
+        padding: 1px 2em 3px 1.33em;
+        font-style: italic;
+      }
+      .MathJax_MenuRule {
+        border-top: 1px solid #dddddd;
+        margin: 4px 3px;
+      }
+      .MathJax_MenuDisabled {
+        color: GrayText;
+      }
+      .MathJax_MenuActive {
+        background-color: #606872;
+        color: white;
+      }
+      .MathJax_MenuDisabled:focus,
+      .MathJax_MenuLabel:focus {
+        background-color: #e8e8e8;
+      }
+      .MathJax_ContextMenu:focus {
+        outline: none;
+      }
+      .MathJax_ContextMenu .MathJax_MenuItem:focus {
+        outline: none;
+      }
+      #MathJax_AboutClose {
+        top: 0.2em;
+        right: 0.2em;
+      }
+      .MathJax_Menu .MathJax_MenuClose {
+        top: -10px;
+        left: -10px;
+      }
+      .MathJax_MenuClose {
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid #aaa;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        font-family: "Courier New", Courier;
+        font-size: 24px;
+        color: #f0f0f0;
+      }
+      .MathJax_MenuClose span {
+        display: block;
+        background-color: #aaa;
+        border: 1.5px solid;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        line-height: 0;
+        padding: 8px 0 6px;
+      }
+      .MathJax_MenuClose:hover {
+        color: white !important;
+        border: 2px solid #ccc !important;
+      }
+      .MathJax_MenuClose:hover span {
+        background-color: #ccc !important;
+      }
+      .MathJax_MenuClose:hover:focus {
+        outline: none;
+      }
+    </style>
+    <style type="text/css">
+      .MathJax_Preview .MJXf-math {
+        color: inherit !important;
+      }
+    </style>
+    <style type="text/css">
+      .MJX_Assistive_MathML {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 1px 0 0 0 !important;
+        border: 0 !important;
+        height: 1px !important;
+        width: 1px !important;
+        overflow: hidden !important;
+        display: block !important;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .MJX_Assistive_MathML.MJX_Assistive_MathML_Block {
+        width: 100% !important;
+      }
+    </style>
+    <style type="text/css">
+      #MathJax_Zoom {
+        position: absolute;
+        background-color: #f0f0f0;
+        overflow: auto;
+        display: block;
+        z-index: 301;
+        padding: 0.5em;
+        border: 1px solid black;
+        margin: 0;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        box-shadow: 5px 5px 15px #aaaaaa;
+        -webkit-box-shadow: 5px 5px 15px #aaaaaa;
+        -moz-box-shadow: 5px 5px 15px #aaaaaa;
+        -khtml-box-shadow: 5px 5px 15px #aaaaaa;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+      #MathJax_ZoomOverlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 300;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+      #MathJax_ZoomFrame {
+        position: relative;
+        display: inline-block;
+        height: 0;
+        width: 0;
+      }
+      #MathJax_ZoomEventTrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 302;
+        display: inline-block;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+    </style>
+    <style type="text/css">
+      .MathJax_Preview {
+        color: #888;
+      }
+      #MathJax_Message {
+        position: fixed;
+        left: 1em;
+        bottom: 1.5em;
+        background-color: #e6e6e6;
+        border: 1px solid #959595;
+        margin: 0px;
+        padding: 2px 8px;
+        z-index: 102;
+        color: black;
+        font-size: 80%;
+        width: auto;
+        white-space: nowrap;
+      }
+      #MathJax_MSIE_Frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0px;
+        z-index: 101;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+      }
+      .MathJax_Error {
+        color: #cc0000;
+        font-style: italic;
+      }
+    </style>
+    <style type="text/css">
+      .MJXp-script {
+        font-size: 0.8em;
+      }
+      .MJXp-right {
+        -webkit-transform-origin: right;
+        -moz-transform-origin: right;
+        -ms-transform-origin: right;
+        -o-transform-origin: right;
+        transform-origin: right;
+      }
+      .MJXp-bold {
+        font-weight: bold;
+      }
+      .MJXp-italic {
+        font-style: italic;
+      }
+      .MJXp-scr {
+        font-family: MathJax_Script, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-frak {
+        font-family: MathJax_Fraktur, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-sf {
+        font-family: MathJax_SansSerif, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-cal {
+        font-family: MathJax_Caligraphic, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-mono {
+        font-family: MathJax_Typewriter, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-largeop {
+        font-size: 150%;
+      }
+      .MJXp-largeop.MJXp-int {
+        vertical-align: -0.2em;
+      }
+      .MJXp-math {
+        display: inline-block;
+        line-height: 1.2;
+        text-indent: 0;
+        font-family: "Times New Roman", Times, STIXGeneral, serif;
+        white-space: nowrap;
+        border-collapse: collapse;
+      }
+      .MJXp-display {
+        display: block;
+        text-align: center;
+        margin: 1em 0;
+      }
+      .MJXp-math span {
+        display: inline-block;
+      }
+      .MJXp-box {
+        display: block !important;
+        text-align: center;
+      }
+      .MJXp-box:after {
+        content: " ";
+      }
+      .MJXp-rule {
+        display: block !important;
+        margin-top: 0.1em;
+      }
+      .MJXp-char {
+        display: block !important;
+      }
+      .MJXp-mo {
+        margin: 0 0.15em;
+      }
+      .MJXp-mfrac {
+        margin: 0 0.125em;
+        vertical-align: 0.25em;
+      }
+      .MJXp-denom {
+        display: inline-table !important;
+        width: 100%;
+      }
+      .MJXp-denom > * {
+        display: table-row !important;
+      }
+      .MJXp-surd {
+        vertical-align: top;
+      }
+      .MJXp-surd > * {
+        display: block !important;
+      }
+      .MJXp-script-box > * {
+        display: table !important;
+        height: 50%;
+      }
+      .MJXp-script-box > * > * {
+        display: table-cell !important;
+        vertical-align: top;
+      }
+      .MJXp-script-box > *:last-child > * {
+        vertical-align: bottom;
+      }
+      .MJXp-script-box > * > * > * {
+        display: block !important;
+      }
+      .MJXp-mphantom {
+        visibility: hidden;
+      }
+      .MJXp-munderover {
+        display: inline-table !important;
+      }
+      .MJXp-over {
+        display: inline-block !important;
+        text-align: center;
+      }
+      .MJXp-over > * {
+        display: block !important;
+      }
+      .MJXp-munderover > * {
+        display: table-row !important;
+      }
+      .MJXp-mtable {
+        vertical-align: 0.25em;
+        margin: 0 0.125em;
+      }
+      .MJXp-mtable > * {
+        display: inline-table !important;
+        vertical-align: middle;
+      }
+      .MJXp-mtr {
+        display: table-row !important;
+      }
+      .MJXp-mtd {
+        display: table-cell !important;
+        text-align: center;
+        padding: 0.5em 0 0 0.5em;
+      }
+      .MJXp-mtr > .MJXp-mtd:first-child {
+        padding-left: 0;
+      }
+      .MJXp-mtr:first-child > .MJXp-mtd {
+        padding-top: 0;
+      }
+      .MJXp-mlabeledtr {
+        display: table-row !important;
+      }
+      .MJXp-mlabeledtr > .MJXp-mtd:first-child {
+        padding-left: 0;
+      }
+      .MJXp-mlabeledtr:first-child > .MJXp-mtd {
+        padding-top: 0;
+      }
+      .MJXp-merror {
+        background-color: #ffff88;
+        color: #cc0000;
+        border: 1px solid #cc0000;
+        padding: 1px 3px;
+        font-style: normal;
+        font-size: 90%;
+      }
+      .MJXp-scale0 {
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transform: scaleX(0);
+      }
+      .MJXp-scale1 {
+        -webkit-transform: scaleX(0.1);
+        -moz-transform: scaleX(0.1);
+        -ms-transform: scaleX(0.1);
+        -o-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+      }
+      .MJXp-scale2 {
+        -webkit-transform: scaleX(0.2);
+        -moz-transform: scaleX(0.2);
+        -ms-transform: scaleX(0.2);
+        -o-transform: scaleX(0.2);
+        transform: scaleX(0.2);
+      }
+      .MJXp-scale3 {
+        -webkit-transform: scaleX(0.3);
+        -moz-transform: scaleX(0.3);
+        -ms-transform: scaleX(0.3);
+        -o-transform: scaleX(0.3);
+        transform: scaleX(0.3);
+      }
+      .MJXp-scale4 {
+        -webkit-transform: scaleX(0.4);
+        -moz-transform: scaleX(0.4);
+        -ms-transform: scaleX(0.4);
+        -o-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+      }
+      .MJXp-scale5 {
+        -webkit-transform: scaleX(0.5);
+        -moz-transform: scaleX(0.5);
+        -ms-transform: scaleX(0.5);
+        -o-transform: scaleX(0.5);
+        transform: scaleX(0.5);
+      }
+      .MJXp-scale6 {
+        -webkit-transform: scaleX(0.6);
+        -moz-transform: scaleX(0.6);
+        -ms-transform: scaleX(0.6);
+        -o-transform: scaleX(0.6);
+        transform: scaleX(0.6);
+      }
+      .MJXp-scale7 {
+        -webkit-transform: scaleX(0.7);
+        -moz-transform: scaleX(0.7);
+        -ms-transform: scaleX(0.7);
+        -o-transform: scaleX(0.7);
+        transform: scaleX(0.7);
+      }
+      .MJXp-scale8 {
+        -webkit-transform: scaleX(0.8);
+        -moz-transform: scaleX(0.8);
+        -ms-transform: scaleX(0.8);
+        -o-transform: scaleX(0.8);
+        transform: scaleX(0.8);
+      }
+      .MJXp-scale9 {
+        -webkit-transform: scaleX(0.9);
+        -moz-transform: scaleX(0.9);
+        -ms-transform: scaleX(0.9);
+        -o-transform: scaleX(0.9);
+        transform: scaleX(0.9);
+      }
+      .MathJax_PHTML .noError {
+        vertical-align: ;
+        font-size: 90%;
+        text-align: left;
+        color: black;
+        padding: 1px 3px;
+        border: 1px solid;
+      }
+    </style>
+    <link
+      rel="preload"
+      href="./LearnOpenGL - Advanced GLSL_files/f.txt"
+      as="script"
+    />
+    <script
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/f.txt"
+    ></script>
+    <link
+      rel="preload"
+      href="./LearnOpenGL - Advanced GLSL_files/f(1).txt"
+      as="script"
+    />
+    <script
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/f(1).txt"
+    ></script>
+    <link
+      rel="prefetch"
+      href="https://3e1d892b63a7a1c5284ed443f6bb0812.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"
+    />
+    <link
+      rel="prefetch"
+      href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"
+    />
+    <style>
+      [data-ad-unit="LEFT_RAIL_DYNAMIC"] {
+        display: none !important;
+      }
+    </style>
+    <style>
+      [data-ad-unit="LEFT_RAIL"] {
+        display: none !important;
+      }
+    </style>
+    <link
+      rel="prefetch"
+      as="style"
+      href="https://c.disquscdn.com/next/embed/styles/lounge.ecd4f8075055ad19101a403818f8e443.css"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      href="https://c.disquscdn.com/next/embed/common.bundle.09288c92e04ecabc4c6ed5aa16297880.js"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      href="https://c.disquscdn.com/next/embed/lounge.bundle.662837d4e26be7d9a8fcc9816bf3567b.js"
+    />
+    <link rel="prefetch" as="script" href="https://disqus.com/next/config.js" />
+    <script type="text/javascript">
+      googletag.cmd.push(function () {
+        googletag
+          .pubads()
+          .addEventListener("slotRenderEnded", function (event) {
+            waldoPassbackCheck(event);
+            waldoAddCloseBtn(event);
+          });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        gptAdSlots[1715] = googletag
+          .defineSlot(
+            "/124067137/learnopengl300x250FL_1",
+            [
+              [300, 250],
+              [300, 600],
+              [160, 600],
+            ],
+            "waldo-tag-1715"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize(
+                [1024, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                  [160, 600],
+                ]
+              )
+              .addSize(
+                [768, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                  [160, 600],
+                ]
+              )
+              .addSize(
+                [0, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                  [160, 600],
+                ]
+              )
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-1715");
+        gptAdSlots[2245] = googletag
+          .defineSlot(
+            "/124067137/learnopengl300x600FL_1",
+            [
+              [300, 250],
+              [300, 600],
+            ],
+            "waldo-tag-2245"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize(
+                [1024, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [768, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [0, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-2245");
+        gptAdSlots[2246] = googletag
+          .defineSlot(
+            "/124067137/learnopengl300x600FL_2",
+            [
+              [300, 250],
+              [300, 600],
+            ],
+            "waldo-tag-2246"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize(
+                [1024, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [768, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [0, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-2246");
+        gptAdSlots[2247] = googletag
+          .defineSlot(
+            "/124067137/learnopengl300x600FL_3",
+            [
+              [300, 250],
+              [300, 600],
+            ],
+            "waldo-tag-2247"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize(
+                [1024, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [768, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .addSize(
+                [0, 0],
+                [
+                  [300, 250],
+                  [300, 600],
+                ]
+              )
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-2247");
+        gptAdSlots[6194] = googletag
+          .defineSlot(
+            "/124067137/learnopengl728x90FS_2",
+            [
+              [728, 90],
+              [320, 50],
+            ],
+            "waldo-tag-6194"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize([1024, 0], [[728, 90]])
+              .addSize([768, 0], [[320, 50]])
+              .addSize([0, 0], [[320, 50]])
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-6194");
+        gptAdSlots[6196] = googletag
+          .defineSlot(
+            "/124067137/learnopengl728x90FS_1",
+            [
+              [728, 90],
+              [320, 50],
+            ],
+            "waldo-tag-6196"
+          )
+          .defineSizeMapping(
+            googletag
+              .sizeMapping()
+              .addSize([1024, 0], [[728, 90]])
+              .addSize([768, 0], [[320, 50]])
+              .addSize([0, 0], [[320, 50]])
+              .build()
+          )
+          .addService(googletag.pubads());
+        googletag.display("waldo-tag-6196");
+      });
+    </script>
+    <link
+      rel="preload"
+      href="./LearnOpenGL - Advanced GLSL_files/f(2).txt"
+      as="script"
+    />
+    <script
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/f(2).txt"
+    ></script>
+    <link
+      rel="preload"
+      href="./LearnOpenGL - Advanced GLSL_files/f(3).txt"
+      as="script"
+    />
+    <script
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/f(3).txt"
+    ></script>
+    <link
+      rel="prefetch"
+      href="https://8fba3637ef467d23408791ab3259cbc3.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"
+    />
+    <link
+      rel="prefetch"
+      href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"
+    />
+  </head>
+  <body style="">
+    <div id="MathJax_Message" style="display: none"></div>
+    <div id="MathJax_Message" style="display: none"></div>
+    <a href="https://learnopengl.com/">
+      <div id="header"></div>
+    </a>
+
+    <div id="supercontainer">
+      <!-- 728x90/320x50 -->
+      <div id="header_ad">
+        <div
+          id="waldo-tag-6194"
+          data-processed="true"
+          data-google-query-id="CJGCl7fZs-wCFU7KvQodg-sJwQ"
+        >
+          <div
+            id="google_ads_iframe_/124067137/learnopengl728x90FS_2_0__container__"
+            style="border: 0pt none"
+          >
+            <iframe
+              id="google_ads_iframe_/124067137/learnopengl728x90FS_2_0"
+              title="3rd party ad content"
+              name="google_ads_iframe_/124067137/learnopengl728x90FS_2_0"
+              width="320"
+              height="50"
+              scrolling="no"
+              marginwidth="0"
+              marginheight="0"
+              frameborder="0"
+              data-google-container-id="6"
+              style="border: 0px; vertical-align: bottom"
+              data-load-complete="true"
+              src="./LearnOpenGL - Advanced GLSL_files/saved_resource(3).html"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div id="rightad_container" style="height: 13036px">
+        <div id="rightad">
+          <!-- /8491498/learnopengl_video -->
+          <!--<div id='div-gpt-ad-1540574378241-0' style='height:225px; width:300px;'>
+			<script>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1540574378241-0'); });
+			</script>
+			</div>            
+            <br/>-->
+
+          <div
+            id="waldo-tag-1715"
+            data-processed="true"
+            data-google-query-id="CI2Cl7fZs-wCFU7KvQodg-sJwQ"
+          >
+            <div
+              id="google_ads_iframe_/124067137/learnopengl300x250FL_1_0__container__"
+              style="border: 0pt none"
+            >
+              <iframe
+                id="google_ads_iframe_/124067137/learnopengl300x250FL_1_0"
+                title="3rd party ad content"
+                name="google_ads_iframe_/124067137/learnopengl300x250FL_1_0"
+                width="300"
+                height="600"
+                scrolling="no"
+                marginwidth="0"
+                marginheight="0"
+                frameborder="0"
+                data-google-container-id="2"
+                style="border: 0px; vertical-align: bottom"
+                data-load-complete="true"
+                src="./LearnOpenGL - Advanced GLSL_files/saved_resource(4).html"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div id="admessage">
+          If you're running AdBlock, please consider whitelisting this site if
+          you'd like to support LearnOpenGL; and no worries, I won't be mad if
+          you don't :)
+          <!--<br/><br/>
+            Also, check out this little local multiplayer-only game I've made: <a href="https://store.steampowered.com/app/983590/Tank_Blazers/" target="_blank">Tank Blazers</a>.
+            <br/>
+            <a href="https://store.steampowered.com/app/983590/Tank_Blazers" target="_blank"><img src="/img/tank_blazers.jpg"  style="width:278px; margin-top: 9px; margin-left: -3px;"/></a>-->
+        </div>
+
+        <div id="rightonethirdad" style="display: block; top: 3726.34px">
+          <div
+            id="waldo-tag-2246"
+            data-processed="true"
+            data-google-query-id="CI-Cl7fZs-wCFU7KvQodg-sJwQ"
+          >
+            <div
+              id="google_ads_iframe_/124067137/learnopengl300x600FL_2_0__container__"
+              style="border: 0pt none"
+            >
+              <iframe
+                id="google_ads_iframe_/124067137/learnopengl300x600FL_2_0"
+                title="3rd party ad content"
+                name="google_ads_iframe_/124067137/learnopengl300x600FL_2_0"
+                width="300"
+                height="600"
+                scrolling="no"
+                marginwidth="0"
+                marginheight="0"
+                frameborder="0"
+                data-google-container-id="4"
+                style="border: 0px; vertical-align: bottom"
+                data-load-complete="true"
+                src="./LearnOpenGL - Advanced GLSL_files/saved_resource(5).html"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div id="rightbottomad" style="display: block">
+          <div
+            id="waldo-tag-2247"
+            data-processed="true"
+            data-google-query-id="CJCCl7fZs-wCFU7KvQodg-sJwQ"
+          >
+            <div
+              id="google_ads_iframe_/124067137/learnopengl300x600FL_3_0__container__"
+              style="border: 0pt none"
+            >
+              <iframe
+                id="google_ads_iframe_/124067137/learnopengl300x600FL_3_0"
+                title="3rd party ad content"
+                name="google_ads_iframe_/124067137/learnopengl300x600FL_3_0"
+                width="300"
+                height="600"
+                scrolling="no"
+                marginwidth="0"
+                marginheight="0"
+                frameborder="0"
+                data-google-container-id="5"
+                style="border: 0px; vertical-align: bottom"
+                data-load-complete="true"
+                src="./LearnOpenGL - Advanced GLSL_files/saved_resource(6).html"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="container">
+        <div id="loading"></div>
+        <script>
+          $(document).ready(function () {
+            $("#menu-item4").mousedown(function () {
+              MenuClick(4, true);
+            });
+            $("#menu-item48").mousedown(function () {
+              MenuClick(48, true);
+            });
+            $("#menu-item56").mousedown(function () {
+              MenuClick(56, true);
+            });
+            $("#menu-item63").mousedown(function () {
+              MenuClick(63, true);
+            });
+            $("#menu-item100").mousedown(function () {
+              MenuClick(100, true);
+            });
+            $("#menu-item102").mousedown(function () {
+              MenuClick(102, true);
+            });
+            $("#menu-item113").mousedown(function () {
+              MenuClick(113, true);
+            });
+            $("#menu-item116").mousedown(function () {
+              MenuClick(116, true);
+            });
+            $("#menu-item78").mousedown(function () {
+              MenuClick(78, true);
+            });
+            $("#menu-item81").mousedown(function () {
+              MenuClick(81, true);
+            });
+            $("#menu-item85").mousedown(function () {
+              MenuClick(85, true);
+            });
+          });
+        </script>
+        <div id="nav" style="height: 13036px">
+          <div id="social">
+            <a
+              href="https://github.com/JoeyDeVries/LearnOpenGL"
+              target="_blank"
+            >
+              <img
+                src="./LearnOpenGL - Advanced GLSL_files/github.png"
+                class="social_ico"
+              />
+            </a>
+            <!-- <a href="https://www.facebook.com/Learnopengl-2199631333595544/" target="_blank">
+                <img src="/img/facebook.png" class="social_ico">
+            </a>-->
+            <a href="https://twitter.com/JoeyDeVriez" target="_blank">
+              <img
+                src="./LearnOpenGL - Advanced GLSL_files/twitter.png"
+                class="social_ico"
+              />
+            </a>
+          </div>
+          <img
+            src="./LearnOpenGL - Advanced GLSL_files/nav-button_bottom-arrow.png"
+            style="display: none"
+          />
+          <ol>
+            <li id="Introduction">
+              <a id="menu-item1" href="https://learnopengl.com/Introduction"
+                >Introduction
+              </a>
+            </li>
+            <li id="Getting-started">
+              <span id="menu-item4" class="closed">Getting started </span>
+              <ol id="menu-items-of4" style="display: none">
+                <li id="Getting-started/OpenGL">
+                  <a
+                    id="menu-item49"
+                    href="https://learnopengl.com/Getting-started/OpenGL"
+                    >OpenGL
+                  </a>
+                </li>
+                <li id="Getting-started/Creating-a-window">
+                  <a
+                    id="menu-item5"
+                    href="https://learnopengl.com/Getting-started/Creating-a-window"
+                    >Creating a window
+                  </a>
+                </li>
+                <li id="Getting-started/Hello-Window">
+                  <a
+                    id="menu-item6"
+                    href="https://learnopengl.com/Getting-started/Hello-Window"
+                    >Hello Window
+                  </a>
+                </li>
+                <li id="Getting-started/Hello-Triangle">
+                  <a
+                    id="menu-item38"
+                    href="https://learnopengl.com/Getting-started/Hello-Triangle"
+                    >Hello Triangle
+                  </a>
+                </li>
+                <li id="Getting-started/Shaders">
+                  <a
+                    id="menu-item39"
+                    href="https://learnopengl.com/Getting-started/Shaders"
+                    >Shaders
+                  </a>
+                </li>
+                <li id="Getting-started/Textures">
+                  <a
+                    id="menu-item40"
+                    href="https://learnopengl.com/Getting-started/Textures"
+                    >Textures
+                  </a>
+                </li>
+                <li id="Getting-started/Transformations">
+                  <a
+                    id="menu-item43"
+                    href="https://learnopengl.com/Getting-started/Transformations"
+                    >Transformations
+                  </a>
+                </li>
+                <li id="Getting-started/Coordinate-Systems">
+                  <a
+                    id="menu-item44"
+                    href="https://learnopengl.com/Getting-started/Coordinate-Systems"
+                    >Coordinate Systems
+                  </a>
+                </li>
+                <li id="Getting-started/Camera">
+                  <a
+                    id="menu-item47"
+                    href="https://learnopengl.com/Getting-started/Camera"
+                    >Camera
+                  </a>
+                </li>
+                <li id="Getting-started/Review">
+                  <a
+                    id="menu-item50"
+                    href="https://learnopengl.com/Getting-started/Review"
+                    >Review
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li id="Lighting">
+              <span id="menu-item48" class="closed">Lighting </span>
+              <ol id="menu-items-of48" style="display: none">
+                <li id="Lighting/Colors">
+                  <a
+                    id="menu-item51"
+                    href="https://learnopengl.com/Lighting/Colors"
+                    >Colors
+                  </a>
+                </li>
+                <li id="Lighting/Basic-Lighting">
+                  <a
+                    id="menu-item52"
+                    href="https://learnopengl.com/Lighting/Basic-Lighting"
+                    >Basic Lighting
+                  </a>
+                </li>
+                <li id="Lighting/Materials">
+                  <a
+                    id="menu-item53"
+                    href="https://learnopengl.com/Lighting/Materials"
+                    >Materials
+                  </a>
+                </li>
+                <li id="Lighting/Lighting-maps">
+                  <a
+                    id="menu-item54"
+                    href="https://learnopengl.com/Lighting/Lighting-maps"
+                    >Lighting maps
+                  </a>
+                </li>
+                <li id="Lighting/Light-casters">
+                  <a
+                    id="menu-item55"
+                    href="https://learnopengl.com/Lighting/Light-casters"
+                    >Light casters
+                  </a>
+                </li>
+                <li id="Lighting/Multiple-lights">
+                  <a
+                    id="menu-item58"
+                    href="https://learnopengl.com/Lighting/Multiple-lights"
+                    >Multiple lights
+                  </a>
+                </li>
+                <li id="Lighting/Review">
+                  <a
+                    id="menu-item57"
+                    href="https://learnopengl.com/Lighting/Review"
+                    >Review
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li id="Model-Loading">
+              <span id="menu-item56" class="closed">Model Loading </span>
+              <ol id="menu-items-of56" style="display: none">
+                <li id="Model-Loading/Assimp">
+                  <a
+                    id="menu-item59"
+                    href="https://learnopengl.com/Model-Loading/Assimp"
+                    >Assimp
+                  </a>
+                </li>
+                <li id="Model-Loading/Mesh">
+                  <a
+                    id="menu-item60"
+                    href="https://learnopengl.com/Model-Loading/Mesh"
+                    >Mesh
+                  </a>
+                </li>
+                <li id="Model-Loading/Model">
+                  <a
+                    id="menu-item61"
+                    href="https://learnopengl.com/Model-Loading/Model"
+                    >Model
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li id="Advanced-OpenGL">
+              <span id="menu-item63" class="open">Advanced OpenGL </span>
+              <ol id="menu-items-of63" style="">
+                <li id="Advanced-OpenGL/Depth-testing">
+                  <a
+                    id="menu-item72"
+                    href="https://learnopengl.com/Advanced-OpenGL/Depth-testing"
+                    >Depth testing
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Stencil-testing">
+                  <a
+                    id="menu-item73"
+                    href="https://learnopengl.com/Advanced-OpenGL/Stencil-testing"
+                    >Stencil testing
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Blending">
+                  <a
+                    id="menu-item74"
+                    href="https://learnopengl.com/Advanced-OpenGL/Blending"
+                    >Blending
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Face-culling">
+                  <a
+                    id="menu-item77"
+                    href="https://learnopengl.com/Advanced-OpenGL/Face-culling"
+                    >Face culling
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Framebuffers">
+                  <a
+                    id="menu-item65"
+                    href="https://learnopengl.com/Advanced-OpenGL/Framebuffers"
+                    >Framebuffers
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Cubemaps">
+                  <a
+                    id="menu-item66"
+                    href="https://learnopengl.com/Advanced-OpenGL/Cubemaps"
+                    >Cubemaps
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Advanced-Data">
+                  <a
+                    id="menu-item69"
+                    href="https://learnopengl.com/Advanced-OpenGL/Advanced-Data"
+                    >Advanced Data
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Advanced-GLSL">
+                  <a
+                    id="menu-item67"
+                    href="https://learnopengl.com/Advanced-OpenGL/Advanced-GLSL"
+                    class="selected"
+                    >Advanced GLSL
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Geometry-Shader">
+                  <a
+                    id="menu-item68"
+                    href="https://learnopengl.com/Advanced-OpenGL/Geometry-Shader"
+                    >Geometry Shader
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Instancing">
+                  <a
+                    id="menu-item70"
+                    href="https://learnopengl.com/Advanced-OpenGL/Instancing"
+                    >Instancing
+                  </a>
+                </li>
+                <li id="Advanced-OpenGL/Anti-Aliasing">
+                  <a
+                    id="menu-item75"
+                    href="https://learnopengl.com/Advanced-OpenGL/Anti-Aliasing"
+                    >Anti Aliasing
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li id="Advanced-Lighting">
+              <span id="menu-item100" class="closed">Advanced Lighting </span>
+              <ol id="menu-items-of100" style="display: none">
+                <li id="Advanced-Lighting/Advanced-Lighting">
+                  <a
+                    id="menu-item101"
+                    href="https://learnopengl.com/Advanced-Lighting/Advanced-Lighting"
+                    >Advanced Lighting
+                  </a>
+                </li>
+                <li id="Advanced-Lighting/Gamma-Correction">
+                  <a
+                    id="menu-item110"
+                    href="https://learnopengl.com/Advanced-Lighting/Gamma-Correction"
+                    >Gamma Correction
+                  </a>
+                </li>
+                <li id="Advanced-Lighting/Shadows">
+                  <span id="menu-item102" class="closed">Shadows </span>
+                  <ol id="menu-items-of102" style="display: none">
+                    <li id="Advanced-Lighting/Shadows/Shadow-Mapping">
+                      <a
+                        id="menu-item103"
+                        href="https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping"
+                        >Shadow Mapping
+                      </a>
+                    </li>
+                    <li id="Advanced-Lighting/Shadows/Point-Shadows">
+                      <a
+                        id="menu-item104"
+                        href="https://learnopengl.com/Advanced-Lighting/Shadows/Point-Shadows"
+                        >Point Shadows
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+                <li id="Advanced-Lighting/Normal-Mapping">
+                  <a
+                    id="menu-item106"
+                    href="https://learnopengl.com/Advanced-Lighting/Normal-Mapping"
+                    >Normal Mapping
+                  </a>
+                </li>
+                <li id="Advanced-Lighting/Parallax-Mapping">
+                  <a
+                    id="menu-item107"
+                    href="https://learnopengl.com/Advanced-Lighting/Parallax-Mapping"
+                    >Parallax Mapping
+                  </a>
+                </li>
+                <li id="Advanced-Lighting/HDR">
+                  <a
+                    id="menu-item111"
+                    href="https://learnopengl.com/Advanced-Lighting/HDR"
+                    >HDR
+                  </a>
+                </li>
+                <li id="Advanced-Lighting/Bloom">
+                  <a
+                    id="menu-item112"
+                    href="https://learnopengl.com/Advanced-Lighting/Bloom"
+                    >Bloom
+                  </a>
+                </li>
+                <li id="Advanced-Lighting/Deferred-Shading">
+                  <a
+                    id="menu-item108"
+                    href="https://learnopengl.com/Advanced-Lighting/Deferred-Shading"
+                    >Deferred Shading
+                  </a>
+                </li>
+                <li id="Advanced-Lighting/SSAO">
+                  <a
+                    id="menu-item109"
+                    href="https://learnopengl.com/Advanced-Lighting/SSAO"
+                    >SSAO
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li id="PBR">
+              <span id="menu-item113" class="closed">PBR </span>
+              <ol id="menu-items-of113" style="display: none">
+                <li id="PBR/Theory">
+                  <a id="menu-item114" href="https://learnopengl.com/PBR/Theory"
+                    >Theory
+                  </a>
+                </li>
+                <li id="PBR/Lighting">
+                  <a
+                    id="menu-item115"
+                    href="https://learnopengl.com/PBR/Lighting"
+                    >Lighting
+                  </a>
+                </li>
+                <li id="PBR/IBL">
+                  <span id="menu-item116" class="closed">IBL </span>
+                  <ol id="menu-items-of116" style="display: none">
+                    <li id="PBR/IBL/Diffuse-irradiance">
+                      <a
+                        id="menu-item117"
+                        href="https://learnopengl.com/PBR/IBL/Diffuse-irradiance"
+                        >Diffuse irradiance
+                      </a>
+                    </li>
+                    <li id="PBR/IBL/Specular-IBL">
+                      <a
+                        id="menu-item118"
+                        href="https://learnopengl.com/PBR/IBL/Specular-IBL"
+                        >Specular IBL
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li id="In-Practice">
+              <span id="menu-item78" class="closed">In Practice </span>
+              <ol id="menu-items-of78" style="display: none">
+                <li id="In-Practice/Debugging">
+                  <a
+                    id="menu-item79"
+                    href="https://learnopengl.com/In-Practice/Debugging"
+                    >Debugging
+                  </a>
+                </li>
+                <li id="In-Practice/Text-Rendering">
+                  <a
+                    id="menu-item80"
+                    href="https://learnopengl.com/In-Practice/Text-Rendering"
+                    >Text Rendering
+                  </a>
+                </li>
+                <li id="In-Practice/2D-Game">
+                  <span id="menu-item81" class="closed">2D Game </span>
+                  <ol id="menu-items-of81" style="display: none">
+                    <li id="In-Practice/2D-Game/Breakout">
+                      <a
+                        id="menu-item82"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Breakout"
+                        >Breakout
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Setting-up">
+                      <a
+                        id="menu-item88"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Setting-up"
+                        >Setting up
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Rendering-Sprites">
+                      <a
+                        id="menu-item83"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Rendering-Sprites"
+                        >Rendering Sprites
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Levels">
+                      <a
+                        id="menu-item84"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Levels"
+                        >Levels
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Collisions">
+                      <span id="menu-item85" class="closed">Collisions </span>
+                      <ol id="menu-items-of85" style="display: none">
+                        <li id="In-Practice/2D-Game/Collisions/Ball">
+                          <a
+                            id="menu-item95"
+                            href="https://learnopengl.com/In-Practice/2D-Game/Collisions/Ball"
+                            >Ball
+                          </a>
+                        </li>
+                        <li
+                          id="In-Practice/2D-Game/Collisions/Collision-detection"
+                        >
+                          <a
+                            id="menu-item96"
+                            href="https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection"
+                            >Collision detection
+                          </a>
+                        </li>
+                        <li
+                          id="In-Practice/2D-Game/Collisions/Collision-resolution"
+                        >
+                          <a
+                            id="menu-item97"
+                            href="https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-resolution"
+                            >Collision resolution
+                          </a>
+                        </li>
+                      </ol>
+                    </li>
+                    <li id="In-Practice/2D-Game/Particles">
+                      <a
+                        id="menu-item89"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Particles"
+                        >Particles
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Postprocessing">
+                      <a
+                        id="menu-item90"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Postprocessing"
+                        >Postprocessing
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Powerups">
+                      <a
+                        id="menu-item91"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Powerups"
+                        >Powerups
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Audio">
+                      <a
+                        id="menu-item94"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Audio"
+                        >Audio
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Render-text">
+                      <a
+                        id="menu-item92"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Render-text"
+                        >Render text
+                      </a>
+                    </li>
+                    <li id="In-Practice/2D-Game/Final-thoughts">
+                      <a
+                        id="menu-item93"
+                        href="https://learnopengl.com/In-Practice/2D-Game/Final-thoughts"
+                        >Final thoughts
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li id="Code-repository">
+              <a id="menu-item99" href="https://learnopengl.com/Code-repository"
+                >Code repository
+              </a>
+            </li>
+            <li id="Translations">
+              <a id="menu-item119" href="https://learnopengl.com/Translations"
+                >Translations
+              </a>
+            </li>
+            <li id="About">
+              <a id="menu-item2" href="https://learnopengl.com/About">About </a>
+            </li>
+          </ol>
+          <div id="donate">
+            <a href="https://www.paypal.me/learnopengl/" target="_blank">
+              <div id="donate_img"></div>
+              <img
+                style="display: none"
+                src="./LearnOpenGL - Advanced GLSL_files/donate_button_hover.png"
+              />
+              <!--<img id="donate_img" src="img/patreon.png"/>-->
+            </a>
+            <!--<div id="alipay">
+            <img style="width: 150px;" class="clean" src="/img/alipay_logo.png"/>
+            <img style="width: 150px; margin-top: 5px" src="/img/alipay.png"/>
+          </div>-->
+          </div>
+          <div id="menu_book">
+            <a href="https://www.amazon.com/dp/9090332561/" target="_blank"
+              ><img
+                src="./LearnOpenGL - Advanced GLSL_files/below_menu.png"
+                class="clean"
+            /></a>
+          </div>
+          <div id="alipay"></div>
+          <div id="ad">
+            <!--<div id="waldo-tag-1684"></div>-->
+          </div>
+
+          <div id="lefttwothirdad" style="display: block; top: 8400.68px">
+            <div
+              id="waldo-tag-2245"
+              data-processed="true"
+              data-google-query-id="CI6Cl7fZs-wCFU7KvQodg-sJwQ"
+            >
+              <div
+                id="google_ads_iframe_/124067137/learnopengl300x600FL_1_0__container__"
+                style="border: 0pt none"
+              >
+                <iframe
+                  id="google_ads_iframe_/124067137/learnopengl300x600FL_1_0"
+                  title="3rd party ad content"
+                  name="google_ads_iframe_/124067137/learnopengl300x600FL_1_0"
+                  width="300"
+                  height="600"
+                  scrolling="no"
+                  marginwidth="0"
+                  marginheight="0"
+                  frameborder="0"
+                  data-google-container-id="3"
+                  style="border: 0px; vertical-align: bottom"
+                  data-load-complete="true"
+                  src="./LearnOpenGL - Advanced GLSL_files/saved_resource(7).html"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="content">
+          <h1 id="content-title">Advanced GLSL</h1>
+          <h1 id="content-url" style="display: none">
+            Advanced-OpenGL/Advanced-GLSL
+          </h1>
+          <p>
+            この章では、シーンのビジュアルクオリティーを大幅に向上させる、超先進的でクールな新機能を紹介することはできません。この章では、多かれ少なかれ、GLSL
+            の興味深い側面と、将来の努力に役立つかもしれない素敵なトリックを紹介します。基本的には、GLSLと組み合わせてOpenGLアプリケーションを作成する際に、あなたの生活をより簡単にしてくれるかもしれない、いくつかの良い知識と機能があります。
+          </p>
+
+          <p>
+            <def>興味深い組み込み変数</def
+            >、シェーダの入出力を整理するための新しい方法、<def>ユニフォームバッファオブジェクト</def>と呼ばれる非常に便利なツールについて説明します。
+          </p>
+
+          <h1>GLSL's built-in variables</h1>
+          <p>
+            シェーダは非常にパイプライン化されており、現在のシェーダ以外のソースからのデータが必要な場合は、データを渡す必要があります。頂点アトリビュート、ユニフォーム、サンプラーを使って、これを行うことを学びました。しかし、GLSL
+            で定義されている
+            <code>gl_</code
+            >がプレフィックスとなっている変数がいくつかあり、データを収集したり書き込んだりするための特別な手段を提供してくれます。頂点シェーダの出力ベクトルである<var>gl_Position</var>と、フラグメントシェーダの<var>gl_FragCoord</var>です。
+          </p>
+
+          <p>
+            We'll discuss a few interesting built-in input and output variables
+            that are built-in in GLSL and explain how they may benefit us. Note
+            that we won't discuss all built-in variables that exist in GLSL so
+            if you want to see all built-in variables you can check OpenGL's
+            <a
+              href="https://www.khronos.org/opengl/wiki/Built-in_Variable_(GLSL)"
+              target="_blank"
+              >wiki</a
+            >.
+          </p>
+
+          <h2>Vertex shader variables</h2>
+          <p>
+            We've already seen <var>gl_Position</var> which is the clip-space
+            output position vector of the vertex shader. Setting
+            <var>gl_Position</var> in the vertex shader is a strict requirement
+            if you want to render anything on the screen. Nothing we haven't
+            seen before.
+          </p>
+
+          <h3>gl_PointSize</h3>
+          <p>
+            One of the render primitives we're able to choose from is
+            <var>GL_POINTS</var> in which case each single vertex is a primitive
+            and rendered as a point. It is possible to set the size of the
+            points being rendered via OpenGL's <fun>glPointSize</fun> function,
+            but we can also influence this value in the vertex shader.
+          </p>
+
+          <p>
+            One output variable defined by GLSL is called
+            <var>gl_PointSize</var> that is a <fun>float</fun> variable where
+            you can set the point's width and height in pixels. By setting the
+            point's size in the vertex shader we get per-vertex control over
+            this point's dimensions.
+          </p>
+
+          <p>
+            Influencing the point sizes in the vertex shader is disabled by
+            default, but if you want to enable this you'll have to enable
+            OpenGL's <var>GL_PROGRAM_POINT_SIZE</var>:
+          </p>
+
+          <pre><code class=" hljs  hljs ">
+<function id="60">glEnable</function>(GL_PROGRAM_POINT_SIZE);  
+</code></pre>
+
+          <p>
+            A simple example of influencing point sizes is by setting the point
+            size equal to the clip-space position's z value which is equal to
+            the vertex's distance to the viewer. The point size should then
+            increase the further we are from the vertices as the viewer.
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">void</span></span> main()
+{
+    gl_Position = projection * view * model * <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span>(aPos, <span class="hljs-number"><span class="hljs-number">1.0</span></span>);    
+    gl_PointSize = gl_Position.z;    
+}  
+</code></pre>
+
+          <p>
+            The result is that the points we've drawn are rendered larger the
+            more we move away from them:
+          </p>
+
+          <img
+            src="./LearnOpenGL - Advanced GLSL_files/advanced_glsl_pointsize.png"
+            class="clean"
+            alt="Points in OpenGL drawn with their gl_PointSize influenced in the vertex shader"
+          />
+
+          <p>
+            You can imagine that varying the point size per vertex is
+            interesting for techniques like particle generation.
+          </p>
+
+          <h3>gl_VertexID</h3>
+          <p>
+            The <var>gl_Position</var> and <var>gl_PointSize</var> are
+            <em>output variables</em> since their value is read as output from
+            the vertex shader; we can influence the result by writing to them.
+            The vertex shader also gives us an interesting
+            <em>input variable</em>, that we can only read from, called
+            <var>gl_VertexID</var>.
+          </p>
+
+          <p>
+            The integer variable <var>gl_VertexID</var> holds the current ID of
+            the vertex we're drawing. When doing
+            <em>indexed rendering</em> (with
+            <fun><function id="2">glDrawElements</function></fun
+            >) this variable holds the current index of the vertex we're
+            drawing. When drawing without indices (via
+            <fun><function id="1">glDrawArrays</function></fun
+            >) this variable holds the number of the currently processed vertex
+            since the start of the render call.
+          </p>
+
+          <h2>Fragment shader variables</h2>
+          <p>
+            Within the fragment shader we also have access to some interesting
+            variables. GLSL gives us two interesting input variables called
+            <var>gl_FragCoord</var> and <var>gl_FrontFacing</var>.
+          </p>
+
+          <h3>gl_FragCoord</h3>
+          <p>
+            We've seen the <var>gl_FragCoord</var> a couple of times before
+            during the discussion of depth testing, because the
+            <code>z</code> component of the <var>gl_FragCoord</var> vector is
+            equal to the depth value of that particular fragment. However, we
+            can also use the x and y component of that vector for some
+            interesting effects.
+          </p>
+
+          <p>
+            The <var>gl_FragCoord</var>'s <code>x</code> and
+            <code>y</code> component are the window- or screen-space coordinates
+            of the fragment, originating from the bottom-left of the window. We
+            specified a render window of 800x600 with
+            <fun><function id="22">glViewport</function></fun> so the
+            screen-space coordinates of the fragment will have
+            <code>x</code> values between 0 and 800, and <code>y</code> values
+            between 0 and 600.
+          </p>
+
+          <p>
+            Using the fragment shader we could calculate a different color value
+            based on the screen coordinate of the fragment. A common usage for
+            the <var>gl_FragCoord</var> variable is for comparing visual output
+            of different fragment calculations, as usually seen in tech demos.
+            We could for example split the screen in two by rendering one output
+            to the left side of the window and another output to the right side
+            of the window. An example fragment shader that outputs a different
+            color based on the fragment's screen coordinates is given below:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">void</span></span> main()
+{             
+    <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(gl_FragCoord.x &lt; <span class="hljs-number"><span class="hljs-number">400</span></span>)
+        FragColor = <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span>(<span class="hljs-number"><span class="hljs-number">1.0</span></span>, <span class="hljs-number"><span class="hljs-number">0.0</span></span>, <span class="hljs-number"><span class="hljs-number">0.0</span></span>, <span class="hljs-number"><span class="hljs-number">1.0</span></span>);
+    <span class="hljs-keyword"><span class="hljs-keyword">else</span></span>
+        FragColor = <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span>(<span class="hljs-number"><span class="hljs-number">0.0</span></span>, <span class="hljs-number"><span class="hljs-number">1.0</span></span>, <span class="hljs-number"><span class="hljs-number">0.0</span></span>, <span class="hljs-number"><span class="hljs-number">1.0</span></span>);        
+}  
+</code></pre>
+
+          <p>
+            Because the width of the window is equal to 800, whenever a pixel's
+            x-coordinate is less than 400 it must be at the left side of the
+            window and we'll give that fragment a different color.
+          </p>
+
+          <img
+            src="./LearnOpenGL - Advanced GLSL_files/advanced_glsl_fragcoord.png"
+            class="clean"
+            alt="Cube in OpenGL drawn with 2 colors using gl_FragCoord"
+          />
+
+          <p>
+            We can now calculate two completely different fragment shader
+            results and display each of them on a different side of the window.
+            This is great for testing out different lighting techniques for
+            example.
+          </p>
+
+          <h3>gl_FrontFacing</h3>
+          <p>
+            Another interesting input variable in the fragment shader is the
+            <var>gl_FrontFacing</var> variable. In the
+            <a
+              href="https://learnopengl.com/Advanced-OpenGL/Face-culling"
+              target="_blank"
+              >face culling</a
+            >
+            chapter we mentioned that OpenGL is able to figure out if a face is
+            a front or back face due to the winding order of the vertices. The
+            <var>gl_FrontFacing</var> variable tells us if the current fragment
+            is part of a front-facing or a back-facing face. We could, for
+            example, decide to output different colors for all back faces.
+          </p>
+
+          <p>
+            The <var>gl_FrontFacing</var> variable is a <fun>bool</fun> that is
+            <code>true</code> if the fragment is part of a front face and
+            <code>false</code> otherwise. We could create a cube this way with a
+            different texture on the inside than on the outside:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-preprocessor"><span class="hljs-preprocessor">#version 330 core</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">out</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span> FragColor;
+  
+<span class="hljs-keyword"><span class="hljs-keyword">in</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vec2</span></span> TexCoords;
+
+<span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> sampler2D frontTexture;
+<span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> sampler2D backTexture;
+
+<span class="hljs-keyword"><span class="hljs-keyword">void</span></span> main()
+{             
+    <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(gl_FrontFacing)
+        FragColor = texture(frontTexture, TexCoords);
+    <span class="hljs-keyword"><span class="hljs-keyword">else</span></span>
+        FragColor = texture(backTexture, TexCoords);
+}  
+</code></pre>
+
+          <p>
+            If we take a peek inside the container we can now see a different
+            texture being used.
+          </p>
+
+          <img
+            src="./LearnOpenGL - Advanced GLSL_files/advanced_glsl_frontfacing.png"
+            class="clean"
+            alt="OpenGL container using two different textures via gl_FrontFacing"
+          />
+
+          <p>
+            Note that if you enabled face culling you won't be able to see any
+            faces inside the container and using <var>gl_FrontFacing</var> would
+            then be pointless.
+          </p>
+
+          <h3>gl_FragDepth</h3>
+          <p>
+            入力変数<var>gl_FragCoord</var>は、画面空間座標を読み込んで現在のフラグメントの深度値を取得することができる入力変数ですが、<def>読み取り専用</def>の変数です。フラグメントのスクリーン空間座標に影響を与えることはできませんが、フラグメントの深度値を設定することは可能です。GLSLは<var>gl_FragDepth</var>という出力変数を与えてくれます。これを使って、シェーダ内でフラグメントの深度値を手動で設定することができます。
+          </p>
+
+          <p>
+            シェーダの深さの値を設定するには、<code>0.0</code>から<code>1.0</code>の間の任意の値を出力変数に書きます。
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+gl_FragDepth = <span class="hljs-number"><span class="hljs-number">0.0</span></span>; <span class="hljs-comment"><span class="hljs-comment">// this fragment now has a depth value of 0.0</span></span>
+</code></pre>
+
+          <p>
+            シェーダが<var>gl_FragDepth</var>に何も書き込まない場合、変数は自動的に
+            <code>gl_FragCoord.z</code>から値を取ります。
+          </p>
+
+          <p>
+            しかし、手動で深度値を設定することには大きな欠点があります。それは、フラグメントシェーダで<var
+              >gl_FragDepth</var
+            >
+            に書き込むとすぐに、OpenGLは<def>初期の深度テスト</def> (
+            <a
+              href="https://learnopengl.com/Advanced-OpenGL/Depth-testing"
+              target="_blank"
+              >深度テスト</a
+            >で議論されているように）を無効にしてしまうからです。これが無効になっているのは、OpenGLがフラグメントシェーダを実行する前に、フラグメントがどのような深さの値を持つかを知ることができないからです。
+          </p>
+
+          <p>
+            <var>gl_FragDepth</var> に書き込むことで、このパフォーマンスのペナルティを考慮する必要があります。しかし、OpenGL 4.2からは、フラグメントシェーダの先頭に<def>深度条件付き</def>で
+            <var>gl_FragDepth</var> 変数を再定義することで、両者の間を仲介することができるようになりました。:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (depth_&lt;condition&gt;) <span class="hljs-keyword"><span class="hljs-keyword">out</span></span> <span class="hljs-keyword"><span class="hljs-keyword">float</span></span> gl_FragDepth;
+</code></pre>
+
+          <p>この<code>condition</code> は以下の値を取ることができます。:</p>
+
+          <table>
+            <tbody>
+              <tr>
+                <th>Condition</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td><code>any</code></td>
+                <td>The default value. Early depth testing is disabled.</td>
+              </tr>
+              <tr>
+                <td><code>greater</code></td>
+                <td>
+                  You can only make the depth value larger compared to
+                  <code>gl_FragCoord.z</code>.
+                </td>
+              </tr>
+              <tr>
+                <td><code>less</code></td>
+                <td>
+                  You can only make the depth value smaller compared to
+                  <code>gl_FragCoord.z</code>.
+                </td>
+              </tr>
+              <tr>
+                <td><code>unchanged</code></td>
+                <td>
+                  If you write to <code>gl_FragDepth</code>, you will write
+                  exactly <code>gl_FragCoord.z</code>.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            深さの条件として大きいか小さいかを指定することで、OpenGLは、フラグメントの深さの値より大きいか小さい深さの値しか書かないという前提を作ることができます。このようにして、OpenGLは、深度バッファ値が
+            <code>gl_FragCoord.z</code>
+            の反対方向の一部である場合でも、初期の深度テストを行うことができます。.
+          </p>
+
+          <p>
+            フラグメントシェーダの深度値を大きくしても、初期の深度テストの一部を残したい場合の例は、以下のフラグメントシェーダに示されています。:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-preprocessor"><span class="hljs-preprocessor">#version 420 core </span><span class="hljs-comment"><span class="hljs-preprocessor"><span class="hljs-comment">// note the GLSL version!</span></span></span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">out</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span> FragColor;
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (depth_greater) <span class="hljs-keyword"><span class="hljs-keyword">out</span></span> <span class="hljs-keyword"><span class="hljs-keyword">float</span></span> gl_FragDepth;
+
+<span class="hljs-keyword"><span class="hljs-keyword">void</span></span> main()
+{             
+    FragColor = <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span>(<span class="hljs-number"><span class="hljs-number">1.0</span></span>);
+    gl_FragDepth = gl_FragCoord.z + <span class="hljs-number"><span class="hljs-number">0.1</span></span>;
+}  
+</code></pre>
+
+          <p>
+            この機能は、OpenGLバージョン4.2以上でのみ利用可能です。
+          </p>
+
+          <h1>Interface blocks</h1>
+          <p>
+            これまでのところ、頂点からフラグメントシェーダにデータを送るたびに、いくつかの一致する入出力変数を宣言していました。これらの変数を一つずつ宣言するのが、あるシェーダから別のシェーダにデータを送る最も簡単な方法ですが、アプリケーションが大きくなってくると、いくつかの変数以上のものを送りたいと思うようになるでしょう。
+          </p>
+
+          <p>
+            これらの変数を整理するために、GLSLは
+            <def>インターフェースブロック</def> と呼ばれるものを提供しています。このようなインターフェースブロックの宣言は <fun>struct</fun> の宣言によく似ていますが、ブロックが入力ブロックか出力ブロックかに基づいて <fun>in</fun> または <fun>out</fun> キーワードを使って宣言されていることを除いては、このような宣言はできません。
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-preprocessor"><span class="hljs-preprocessor">#version 330 core</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (location = <span class="hljs-number"><span class="hljs-number">0</span></span>) <span class="hljs-keyword"><span class="hljs-keyword">in</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vec3</span></span> aPos;
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (location = <span class="hljs-number"><span class="hljs-number">1</span></span>) <span class="hljs-keyword"><span class="hljs-keyword">in</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vec2</span></span> aTexCoords;
+
+<span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> model;
+<span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> view;
+<span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> projection;
+
+<span class="hljs-keyword"><span class="hljs-keyword">out</span></span> VS_OUT
+{
+    <span class="hljs-built_in"><span class="hljs-built_in">vec2</span></span> TexCoords;
+} vs_out;
+
+<span class="hljs-keyword"><span class="hljs-keyword">void</span></span> main()
+{
+    gl_Position = projection * view * model * <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span>(aPos, <span class="hljs-number"><span class="hljs-number">1.0</span></span>);    
+    vs_out.TexCoords = aTexCoords;
+}  
+</code></pre>
+
+          <p>
+            今回は、次のシェーダに送りたいすべての出力変数をグループ化する
+            <var>vs_out</var> vs_out というインターフェースブロックを宣言しました。これは些細な例ですが、これがシェーダの入出力を整理するのに役立つことは想像できるでしょう。また、
+            <a
+              href="https://learnopengl.com/Advanced-OpenGL/Geometry-Shader"
+              target="_blank"
+              >次のジオメトリシェーダの章</a
+            >
+            で説明するように、シェーダの入出力を配列にグループ化したい場合にも便利です。
+          </p>
+
+          <p>
+            次に、次のシェーダであるフラグメントシェーダの入力インターフェースブロックを宣言する必要があります。
+            <def>ブロック名</def> (<fun>VS_OUT</fun>) はフラグメントシェーダでも同じにしますが、<def>インスタンス名</def> (頂点シェーダで使用されている<var>vs_out</var>
+            ) は好きな名前にしてください - 入力値を含むフラグメント構造体の<var>vs_out</var> のような名前を混乱させないように。
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-preprocessor"><span class="hljs-preprocessor">#version 330 core</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">out</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span> FragColor;
+
+<span class="hljs-keyword"><span class="hljs-keyword">in</span></span> VS_OUT
+{
+    <span class="hljs-built_in"><span class="hljs-built_in">vec2</span></span> TexCoords;
+} fs_in;
+
+<span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> sampler2D texture;
+
+<span class="hljs-keyword"><span class="hljs-keyword">void</span></span> main()
+{             
+    FragColor = texture(texture, fs_in.TexCoords);   
+} 
+</code></pre>
+
+          <p>
+            両方のインターフェイスブロック名が同じである限り、対応する入力と出力が一致します。これもコードの整理に役立つ便利な機能で、ジオメトリシェーダのような特定のシェーダステージ間で交差するときに便利です。
+          </p>
+
+          <h1>Uniform buffer objects</h1>
+          <p>
+            私たちは、かなり長い間OpenGLを使ってきて、いくつかのクールなトリックを学んできましたが、いくつかのイライラもありました。例えば、複数のシェーダを使用する場合、私たちは継続的に統一変数を設定しなければなりませんが、そのほとんどは各シェーダに対して全く同じです。
+          </p>
+
+          <p>
+            OpenGLは、 <def>uniform buffer objects</def> と呼ばれるツールを提供してくれます。これは、いくつものシェーダプログラムに渡って同じままの<em>global</em> 変数のセットを宣言できるようにしてくれます。 を使用する場合、関連するユニフォームを固定 GPU メモリに
+            <strong>一度だけ</strong> 設定します。 シェーダごとに固有のユニフォームを手動で設定する必要があります。しかし、ユニフォームバッファオブジェクトを作成して設定するのには少々の作業が必要です。
+          </p>
+
+          <p>
+            ユニフォームバッファオブジェクトは他のバッファと同じようにバッファなので、
+            <fun><function id="12">glGenBuffers</function></fun
+            >で作成し、 <var>GL_UNIFORM_BUFFER</var> バッファターゲットにバインドして、関連するユニフォームデータをすべてバッファに格納することができます。ユニフォームバッファオブジェクトのデータをどのように保存するかについてはルールがあり、それについては後ほど説明します。まず、単純な頂点シェーダを用いて、<var>投影行列</var> と
+            <var>ビュー行列</var> を<def>uniform block</def>に格納します。:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-preprocessor"><span class="hljs-preprocessor">#version 330 core</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (location = <span class="hljs-number"><span class="hljs-number">0</span></span>) <span class="hljs-keyword"><span class="hljs-keyword">in</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vec3</span></span> aPos;
+
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (std140) <span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> Matrices
+{
+    <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> projection;
+    <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> view;
+};
+
+<span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> model;
+
+<span class="hljs-keyword"><span class="hljs-keyword">void</span></span> main()
+{
+    gl_Position = projection * view * model * <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span>(aPos, <span class="hljs-number"><span class="hljs-number">1.0</span></span>);
+}  
+</code></pre>
+
+          <p>
+            ほとんどのサンプルでは、使用しているシェーダごとにフレームごとに投影とビューの一様行列を設定しています。これは、これらの行列を一度だけ格納するだけで済むようになったので、一様バッファオブジェクトが便利な例です。
+          </p>
+
+          <p>
+            ここでは、2 つの 4x4 の行列を格納する <var>Matrices</var> と呼ばれる一様ブロックを宣言しています。 統一ブロック内の変数は、ブロック名をプレフィックスとして指定しなくても直接アクセスすることができます。そして、これらの行列の値をOpenGLコードのどこかのバッファに格納し、この統一ブロックを宣言した各シェーダが行列にアクセスできるようにします。
+          </p>
+
+          <p>
+            今、 <code>layout</code>
+            <code>(std140)</code> 文が何を意味するのか疑問に思っているかもしれません。これは、現在定義されている
+            <def>uniform block layout</def>が、その内容のために特定のメモリ レイアウトを使用していることを意味します。
+          </p>
+
+          <h2>Uniform block layout</h2>
+          <p>
+            一様ブロックの内容はバッファオブジェクトに格納されていますが、これは事実上、グローバル GPU メモリの予約された部分に過ぎません。このメモリはどのようなデータを保持しているかの情報を保持していないので、メモリのどの部分がシェーダ内のどのユニフォーム変数に対応しているかをOpenGLに伝える必要があります。
+          </p>
+
+          <p>シェーダ内の次の一様ブロックを想像してみてください。:</p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (std140) <span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> ExampleBlock
+{
+    <span class="hljs-keyword"><span class="hljs-keyword">float</span></span> value;
+    <span class="hljs-built_in"><span class="hljs-built_in">vec3</span></span>  <span class="hljs-built_in"><span class="hljs-built_in">vector</span></span>;
+    <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span>  matrix;
+    <span class="hljs-keyword"><span class="hljs-keyword">float</span></span> values[<span class="hljs-number"><span class="hljs-number">3</span></span>];
+    <span class="hljs-keyword"><span class="hljs-keyword">bool</span></span>  boolean;
+    <span class="hljs-keyword"><span class="hljs-keyword">int</span></span>   integer;
+};  
+</code></pre>
+
+          <p>
+            私たちが知りたいのは、これらの変数のサイズ（バイト単位）とオフセット（ブロックの開始から）です。各要素のサイズは、OpenGLで明確に述べられており、C++のデータ型に直接対応しています; ベクトルと行列は、（大きな）フロートの配列です。
+            OpenGLが明確に述べていないのは、変数間の<def>間隔</def> です。 これは、ハードウェアが適切と思うように変数を配置したり、パッドを入れたりすることを可能にします。ハードウェアは、例えば、<fun>float</fun>の隣に
+            <fun>vec3</fun> を配置することができます。すべてのハードウェアがこれを扱えるわけではなく、<fun>float</fun> を追加する前に <fun>vec3</fun> を 4 つの float の配列にパッドします。 素晴らしい機能ですが、私たちにとっては不便です。
+          </p>
+
+          <p>
+            デフォルトでは、
+            <def>共有</def> レイアウトと呼ばれる一様なメモリレイアウトを使用します  - 共有とは、一度ハードウェアによってオフセットが定義されると、複数のプログラム間で一貫して
+            <em>共有</em> されるからです。 共有レイアウトでは、変数の順番がそのままである限り、GLSLは最適化のために一様変数を再配置することができます。各一様変数のオフセットがわからないので、一様バッファを正確に埋める方法がわかりません。 <fun>glGetUniformIndices</fun>のような関数を使ってこの情報を問い合わせることができますが、この章ではこのアプローチを取りません。
+          </p>
+
+          <p>
+            共有レイアウトを使用することでスペースを節約して最適化することができますが、各ユニフォーム変数のオフセットを問い合わせる必要があるため、多くの作業が必要になります。 しかし、一般的には共有レイアウトを使用せず、 <def>std140</def> レイアウトを使用するのが一般的です。 std140レイアウトは、一連のルールによって管理されるそれぞれのオフセットを標準化することで、各変数タイプのメモリレイアウトを<strong>明示的に</strong> 示しています。これが標準化されているので、各変数のオフセットを手動で求めることができます。
+          </p>
+
+          <p>
+            各変数は、std140 レイアウト・ルールを使用した統一ブロック内で変数が取るスペース（パディングを含む）に等しい <def>ベース・アラインメント</def> を持っています。 各変数について、
+            <def>アラインメントされた</def>オフセットを計算します：ブロックの開始位置からの変数のバイトオフセット。変数のアラインメントされたバイトオフセットは、そのベースアラインメントの倍数に
+            <strong>必ず</strong> 等しくなければなりません。
+            これは少し口惜しいですが、すぐにいくつかの例を見て、物事を明確にしましょう。
+          </p>
+
+          <p>
+            正確なレイアウトルールは、
+            <a
+              href="http://www.opengl.org/registry/specs/ARB/uniform_buffer_object.txt"
+              target="_blank"
+              >OpenGLの統一バッファ仕様</a
+            >を参照してください。もっとも一般的なルールについては以下に記します。 GLSLの
+            <fun>int</fun>,、<fun>float</fun> 、
+            <fun>bool</fun> などの各変数型は、4バイトの各エンティティを<code>N</code>として表現した4バイトの量として定義されています。 
+          </p>
+
+          <table>
+            <tbody>
+              <tr>
+                <th>Type</th>
+                <th>Layout rule</th>
+              </tr>
+
+              <tr>
+                <td>Scalar e.g. <fun>int</fun> or <fun>bool</fun></td>
+                <td>Each scalar has a base alignment of N.</td>
+              </tr>
+              <tr>
+                <td>Vector</td>
+                <td>
+                  Either 2N or 4N. This means that a <fun>vec3</fun> has a base
+                  alignment of 4N.
+                </td>
+              </tr>
+              <tr>
+                <td>Array of scalars or vectors</td>
+                <td>
+                  Each element has a base alignment equal to that of a
+                  <fun>vec4</fun>.
+                </td>
+              </tr>
+              <tr>
+                <td>Matrices</td>
+                <td>
+                  Stored as a large array of column vectors, where each of those
+                  vectors has a base alignment of <fun>vec4</fun>.
+                </td>
+              </tr>
+              <tr>
+                <td>Struct</td>
+                <td>
+                  Equal to the computed size of its elements according to the
+                  previous rules, but padded to a multiple of the size of a
+                  <fun>vec4</fun>.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            ほとんどのOpenGLの仕様と同様に、例を示すと理解しやすくなります。先ほど紹介した
+            <var>ExampleBlock</var> と呼ばれる均一なブロックを取り、そのメンバーのそれぞれの整列したオフセットをstd140レイアウトを使って計算しています。:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (std140) <span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> ExampleBlock
+{
+                     <span class="hljs-comment"><span class="hljs-comment">// base alignment  // aligned offset</span></span>
+    <span class="hljs-keyword"><span class="hljs-keyword">float</span></span> value;     <span class="hljs-comment"><span class="hljs-comment">// 4               // 0 </span></span>
+    <span class="hljs-built_in"><span class="hljs-built_in">vec3</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vector</span></span>;     <span class="hljs-comment"><span class="hljs-comment">// 16              // 16  (offset must be multiple of 16 so 4-&gt;16)</span></span>
+    <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> matrix;     <span class="hljs-comment"><span class="hljs-comment">// 16              // 32  (column 0)</span></span>
+                     <span class="hljs-comment"><span class="hljs-comment">// 16              // 48  (column 1)</span></span>
+                     <span class="hljs-comment"><span class="hljs-comment">// 16              // 64  (column 2)</span></span>
+                     <span class="hljs-comment"><span class="hljs-comment">// 16              // 80  (column 3)</span></span>
+    <span class="hljs-keyword"><span class="hljs-keyword">float</span></span> values[<span class="hljs-number"><span class="hljs-number">3</span></span>]; <span class="hljs-comment"><span class="hljs-comment">// 16              // 96  (values[0])</span></span>
+                     <span class="hljs-comment"><span class="hljs-comment">// 16              // 112 (values[1])</span></span>
+                     <span class="hljs-comment"><span class="hljs-comment">// 16              // 128 (values[2])</span></span>
+    <span class="hljs-keyword"><span class="hljs-keyword">bool</span></span> boolean;    <span class="hljs-comment"><span class="hljs-comment">// 4               // 144</span></span>
+    <span class="hljs-keyword"><span class="hljs-keyword">int</span></span> integer;     <span class="hljs-comment"><span class="hljs-comment">// 4               // 148</span></span>
+}; 
+</code></pre>
+
+          <p>
+            練習として、自分でオフセット値を計算して、この表と比較してみてください。これらの計算されたオフセット値を使って、std140レイアウトのルールに基づいて、
+            <fun><function id="90">glBufferSubData</function></fun
+            >のような関数を使って適切なオフセットでバッファにデータを充填することができます。最も効率的ではありませんが、std140レイアウトは、この統一されたブロックを宣言した各プログラムでメモリレイアウトが同じであることを保証してくれます。
+          </p>
+
+          <p>
+            統一ブロックの定義にステートメント <code>layout</code> <code>(std140)</code> を追加することで、この統一ブロックがstd140レイアウトを使用することをOpenGLに伝えます。バッファを埋める前に各オフセットを照会する必要があるレイアウトが他にも2つあります。 すでに <code>shared</code> レイアウト を見てきましたが、他の残りのレイアウトは <code>packed</code>されています。
+            <code>packed</code> されたレイアウトを使用すると、シェーダごとに異なる可能性のあるユニフォームブロックから離れたユニフォーム変数をコンパイラが最適化することができるため、プログラム間でレイアウトが同じままであるという保証はありません（共有ではありません）。
+          </p>
+
+          <h2>Using uniform buffers</h2>
+          <p>
+            統一ブロックを定義し、そのメモリレイアウトを指定しましたが、実際にどのように使用するかはまだ説明していません。
+          </p>
+
+          <p>
+            まず、ユニフォームバッファオブジェクトを作成する必要がありますが、これはお馴染みの <fun><function id="12">glGenBuffers</function></fun
+            >で行います。 バッファオブジェクトを作成したら、それを
+            <var>GL_UNIFORM_BUFFER</var> ターゲットにバインドし、
+            <fun><function id="31">glBufferData</function></fun
+            >を呼び出して十分なメモリを確保します。
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">unsigned</span></span> <span class="hljs-keyword"><span class="hljs-keyword">int</span></span> uboExampleBlock;
+<function id="12">glGenBuffers</function>(<span class="hljs-number"><span class="hljs-number">1</span></span>, &amp;uboExampleBlock);
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, uboExampleBlock);
+<function id="31">glBufferData</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">152</span></span>, NULL, GL_STATIC_DRAW); <span class="hljs-comment"><span class="hljs-comment">// allocate 152 bytes of memory</span></span>
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">0</span></span>);
+</code></pre>
+
+          <p>
+            これで、バッファにデータを更新したり挿入したりしたいときはいつでも、<var>uboExampleBlock</var> にバインドし、
+            <fun><function id="90">glBufferSubData</function></fun> tを使ってメモリを更新することができるようになりました。 この一様なバッファを一度だけ更新するだけで、このバッファを使用するすべてのシェーダは、その更新されたデータを使用するようになりました。しかし、OpenGLはどの統一バッファがどの統一ブロックに対応しているかをどのようにして知っているのでしょうか？
+          </p>
+
+          <p>
+            OpenGLのコンテキストでは、ユニフォームバッファをリンクすることができるいくつかの
+            <def>バインディングポイント</def>が定義されています。 一旦ユニフォームバッファを作成したら、それらのバインディングポイントの一つにリンクし、シェーダ内のユニフォームブロックも同じバインディングポイントにリンクし、効果的にそれらを一緒にリンクします。次の図はこれを示しています。:
+          </p>
+
+          <img
+            src="./LearnOpenGL - Advanced GLSL_files/advanced_glsl_binding_points.png"
+            class="clean"
+            alt="Diagram of uniform binding points in OpenGL"
+          />
+
+          <p>
+            ご覧のように、複数のユニフォームバッファを異なるバインディングポイントにバインドすることができます。シェーダ A とシェーダ B は両方とも同じバインディングポイント  <code>0</code>, にリンクされたユニフォームブロックを持っているので、それらのユニフォームブロックは<var>uboMatrices</var>にある同じユニフォームデータを共有しています。
+          </p>
+
+          <p>
+            シェーダのユニフォームブロックを特定のバインディングポイントに設定するには、プログラムオブジェクト、ユニフォームブロックインデックス、リンク先のバインディングポイントを受け取る 
+            <fun
+              ><function id="95"
+                ><function id="44">glUniform</function>BlockBinding</function
+              ></fun
+            >
+            を呼び出します。 <def>uniform block index</def> iは、シェーダ内で定義されたユニフォームブロックの位置インデックスです。これは、プログラムオブジェクトとユニフォームブロックの名前を受け付ける
+            <fun><function id="94">glGetUniformBlockIndex</function></fun> を呼び出すことで取得できます。次のように、図からバインディングポイント<code>2</code>に<var>Lights</var> のユニフォームブロックを設定することができます。:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">unsigned</span></span> <span class="hljs-keyword"><span class="hljs-keyword">int</span></span> lights_index = <function id="94">glGetUniformBlockIndex</function>(shaderA.ID, <span class="hljs-string"><span class="hljs-string">"Lights"</span></span>);   
+<function id="95"><function id="44">glUniform</function>BlockBinding</function>(shaderA.ID, lights_index, <span class="hljs-number"><span class="hljs-number">2</span></span>);
+</code></pre>
+
+          <p>
+            この処理を各<strong>シェーダごと</strong> に繰り返す必要があることに注意してください。
+            
+          </p>
+
+          <note>
+            OpenGLバージョン4.2以降では、別のレイアウト指定子を追加することで、シェーダ内にユニフォームブロックのバインディングポイントを明示的に格納することも可能で、
+            <fun><function id="94">glGetUniformBlockIndex</function></fun> と
+            <fun
+              ><function id="95"
+                ><function id="44">glUniform</function>BlockBinding</function
+              ></fun
+            >の呼び出しを省くことができます。次のコードは、
+            <var>Lights</var> ユニフォームブロックのバインディングポイントを明示的に設定しています。:
+            <pre class="cpp"><code class=" hljs  hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span>(std140, binding = <span class="hljs-number"><span class="hljs-number">2</span></span>) <span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> Lights { ... };
+</code></pre>
+          </note>
+
+          <p>
+            次に、ユニフォームバッファオブジェクトを同じバインディングポイントにバインドする必要があり、これは 
+            <fun
+              ><function id="96"
+                ><function id="32">glBindBuffer</function>Base</function
+              ></fun
+            >
+            または
+            <fun
+              ><function id="97"
+                ><function id="32">glBindBuffer</function>Range</function
+              ></fun
+            >のいずれかを使用して実現できます。
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<function id="96"><function id="32">glBindBuffer</function>Base</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">2</span></span>, uboExampleBlock); 
+<span class="hljs-comment"><span class="hljs-comment">// or</span></span>
+<function id="97"><function id="32">glBindBuffer</function>Range</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">2</span></span>, uboExampleBlock, <span class="hljs-number"><span class="hljs-number">0</span></span>, <span class="hljs-number"><span class="hljs-number">152</span></span>);
+</code></pre>
+
+          <p>
+            関数 
+            <fun
+              ><function id="96"
+                ><function id="32">glBindbuffer</function>Base</function
+              ></fun
+            >
+            は、ターゲット、バインディングポイントインデックス、一様なバッファオブジェクトを想定しています。この関数は、<var>uboExampleBlock</var> をバインディングポイント 
+            <code>2</code>;にリンクします。 また、追加のオフセットとサイズパラメータを想定した
+            <fun
+              ><function id="97"
+                ><function id="32">glBindBuffer</function>Range</function
+              ></fun
+            >
+            を使用することもできます - この方法では、ユニフォームバッファの特定の範囲のみをバインディングポイントにバインドすることができます。
+            <fun
+              ><function id="97"
+                ><function id="32">glBindBuffer</function>Range</function
+              ></fun
+            >
+            を使用すると、複数の異なるユニフォームブロックを一つのユニフォームバッファオブジェクトにリンクさせることができます。
+          </p>
+
+          <p>
+            これですべての設定が完了したので、ユニフォームバッファへのデータの追加を開始します。全てのデータをシングルバイト配列として追加したり、
+            <fun><function id="90">glBufferSubData</function></fun
+            >を使ってバッファの一部を更新したりすることができます。ユニフォーム変数の <var>boolean</var> を更新するには、以下のようにユニフォームバッファオブジェクトを更新します。
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, uboExampleBlock);
+<span class="hljs-keyword"><span class="hljs-keyword">int</span></span> b = <span class="hljs-keyword"><span class="hljs-keyword">true</span></span>; <span class="hljs-comment"><span class="hljs-comment">// bools in GLSL are represented as 4 bytes, so we store it in an integer</span></span>
+<function id="90">glBufferSubData</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">144</span></span>, <span class="hljs-number"><span class="hljs-number">4</span></span>, &amp;b); 
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">0</span></span>);
+</code></pre>
+
+          <p>
+            そして、一様ブロック内の他の全ての一様変数にも同じ手順が適用されますが、異なる範囲の引数を使用します。
+          </p>
+
+          <h2>A simple example</h2>
+          <p>
+            それでは、一様なバッファオブジェクトの実例を示してみましょう。これまでのコードサンプルを振り返ってみると、投影行列、ビュー行列、モデル行列の3つの行列を継続的に使用しています。これらのマトリックスのうち、モデルマトリックスだけが頻繁に変更されています。複数のシェーダが同じマトリックスを使用している場合は、一様なバッファオブジェクトを使用した方が良いでしょう。
+          </p>
+
+          <p>
+            ここでは、投影行列とビュー行列を<var>Matrices</var>という一様なブロックに格納します。モデルマトリクスはシェーダ間で頻繁に変更されるので、ここにはモデルマトリクスは格納しません。
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-preprocessor"><span class="hljs-preprocessor">#version 330 core</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (location = <span class="hljs-number"><span class="hljs-number">0</span></span>) <span class="hljs-keyword"><span class="hljs-keyword">in</span></span> <span class="hljs-built_in"><span class="hljs-built_in">vec3</span></span> aPos;
+
+<span class="hljs-keyword"><span class="hljs-keyword">layout</span></span> (std140) <span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> Matrices
+{
+    <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> projection;
+    <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> view;
+};
+<span class="hljs-keyword"><span class="hljs-keyword">uniform</span></span> <span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> model;
+
+<span class="hljs-keyword"><span class="hljs-keyword">void</span></span> main()
+{
+    gl_Position = projection * view * model * <span class="hljs-built_in"><span class="hljs-built_in">vec4</span></span>(aPos, <span class="hljs-number"><span class="hljs-number">1.0</span></span>);
+}  
+</code></pre>
+
+          <p>
+            Not much going on here, except that we now use a uniform block with
+            a std140 layout. What we're going to do in our sample application is
+            display 4 cubes where each cube is displayed with a different shader
+            program. Each of the 4 shader programs uses the same vertex shader,
+            but has a unique fragment shader that only outputs a single color
+            that differs per shader.
+          </p>
+
+          <p>
+            First, we set the uniform block of the vertex shaders equal to
+            binding point <code>0</code>. Note that we have to do this for each
+            shader:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">unsigned</span></span> <span class="hljs-keyword"><span class="hljs-keyword">int</span></span> uniformBlockIndexRed    = <function id="94">glGetUniformBlockIndex</function>(shaderRed.ID, <span class="hljs-string"><span class="hljs-string">"Matrices"</span></span>);
+<span class="hljs-keyword"><span class="hljs-keyword">unsigned</span></span> <span class="hljs-keyword"><span class="hljs-keyword">int</span></span> uniformBlockIndexGreen  = <function id="94">glGetUniformBlockIndex</function>(shaderGreen.ID, <span class="hljs-string"><span class="hljs-string">"Matrices"</span></span>);
+<span class="hljs-keyword"><span class="hljs-keyword">unsigned</span></span> <span class="hljs-keyword"><span class="hljs-keyword">int</span></span> uniformBlockIndexBlue   = <function id="94">glGetUniformBlockIndex</function>(shaderBlue.ID, <span class="hljs-string"><span class="hljs-string">"Matrices"</span></span>);
+<span class="hljs-keyword"><span class="hljs-keyword">unsigned</span></span> <span class="hljs-keyword"><span class="hljs-keyword">int</span></span> uniformBlockIndexYellow = <function id="94">glGetUniformBlockIndex</function>(shaderYellow.ID, <span class="hljs-string"><span class="hljs-string">"Matrices"</span></span>);  
+  
+<function id="95"><function id="44">glUniform</function>BlockBinding</function>(shaderRed.ID,    uniformBlockIndexRed, <span class="hljs-number"><span class="hljs-number">0</span></span>);
+<function id="95"><function id="44">glUniform</function>BlockBinding</function>(shaderGreen.ID,  uniformBlockIndexGreen, <span class="hljs-number"><span class="hljs-number">0</span></span>);
+<function id="95"><function id="44">glUniform</function>BlockBinding</function>(shaderBlue.ID,   uniformBlockIndexBlue, <span class="hljs-number"><span class="hljs-number">0</span></span>);
+<function id="95"><function id="44">glUniform</function>BlockBinding</function>(shaderYellow.ID, uniformBlockIndexYellow, <span class="hljs-number"><span class="hljs-number">0</span></span>);
+</code></pre>
+
+          <p>
+            Next we create the actual uniform buffer object and bind that buffer
+            to binding point <code>0</code>:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<span class="hljs-keyword"><span class="hljs-keyword">unsigned</span></span> <span class="hljs-keyword"><span class="hljs-keyword">int</span></span> uboMatrices
+<function id="12">glGenBuffers</function>(<span class="hljs-number"><span class="hljs-number">1</span></span>, &amp;uboMatrices);
+  
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, uboMatrices);
+<function id="31">glBufferData</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">2</span></span> * <span class="hljs-keyword"><span class="hljs-keyword">sizeof</span></span>(glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span>), NULL, GL_STATIC_DRAW);
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">0</span></span>);
+  
+<function id="97"><function id="32">glBindBuffer</function>Range</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">0</span></span>, uboMatrices, <span class="hljs-number"><span class="hljs-number">0</span></span>, <span class="hljs-number"><span class="hljs-number">2</span></span> * <span class="hljs-keyword"><span class="hljs-keyword">sizeof</span></span>(glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span>));
+</code></pre>
+
+          <p>
+            First we allocate enough memory for our buffer which is equal to 2
+            times the size of <fun>glm::mat4</fun>. The size of GLM's matrix
+            types correspond directly to <fun>mat4</fun> in GLSL. Then we link a
+            specific range of the buffer, in this case the entire buffer, to
+            binding point <code>0</code>.
+          </p>
+
+          <p>
+            Now all that's left to do is fill the buffer. If we keep the
+            <em>field of view</em> value constant of the projection matrix (so
+            no more camera zoom) we only have to update it once in our
+            application - this means we only have to insert this into the buffer
+            only once as well. Because we already allocated enough memory in the
+            buffer object we can use
+            <fun><function id="90">glBufferSubData</function></fun> to store the
+            projection matrix before we enter the render loop:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> projection = <function id="58">glm::perspective</function>(<function id="63">glm::radians</function>(<span class="hljs-number"><span class="hljs-number">45.0f</span></span>), (<span class="hljs-keyword"><span class="hljs-keyword">float</span></span>)width/(<span class="hljs-keyword"><span class="hljs-keyword">float</span></span>)height, <span class="hljs-number"><span class="hljs-number">0.1f</span></span>, <span class="hljs-number"><span class="hljs-number">100.0f</span></span>);
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, uboMatrices);
+<function id="90">glBufferSubData</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">0</span></span>, <span class="hljs-keyword"><span class="hljs-keyword">sizeof</span></span>(glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span>), glm::value_ptr(projection));
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">0</span></span>);  
+</code></pre>
+
+          <p>
+            Here we store the first half of the uniform buffer with the
+            projection matrix. Then before we render the objects each frame we
+            update the second half of the buffer with the view matrix:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> view = camera.GetViewMatrix();	       
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, uboMatrices);
+<function id="90">glBufferSubData</function>(GL_UNIFORM_BUFFER, <span class="hljs-keyword"><span class="hljs-keyword">sizeof</span></span>(glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span>), <span class="hljs-keyword"><span class="hljs-keyword">sizeof</span></span>(glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span>), glm::value_ptr(view));
+<function id="32">glBindBuffer</function>(GL_UNIFORM_BUFFER, <span class="hljs-number"><span class="hljs-number">0</span></span>);  
+</code></pre>
+
+          <p>
+            And that's it for uniform buffer objects. Each vertex shader that
+            contains a <var>Matrices</var> uniform block will now contain the
+            data stored in <var>uboMatrices</var>. So if we now were to draw 4
+            cubes using 4 different shaders, their projection and view matrix
+            should be the same:
+          </p>
+
+          <pre><code class=" hljs cpp hljs ">
+<function id="27">glBindVertexArray</function>(cubeVAO);
+shaderRed.use();
+glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span> model = glm::<span class="hljs-built_in"><span class="hljs-built_in">mat4</span></span>(<span class="hljs-number"><span class="hljs-number">1.0f</span></span>);
+model = <function id="55">glm::translate</function>(model, glm::<span class="hljs-built_in"><span class="hljs-built_in">vec3</span></span>(-<span class="hljs-number"><span class="hljs-number">0.75f</span></span>, <span class="hljs-number"><span class="hljs-number">0.75f</span></span>, <span class="hljs-number"><span class="hljs-number">0.0f</span></span>));	<span class="hljs-comment"><span class="hljs-comment">// move top-left</span></span>
+shaderRed.setMat4(<span class="hljs-string"><span class="hljs-string">"model"</span></span>, model);
+<function id="1">glDrawArrays</function>(GL_TRIANGLES, <span class="hljs-number"><span class="hljs-number">0</span></span>, <span class="hljs-number"><span class="hljs-number">36</span></span>);        
+<span class="hljs-comment"><span class="hljs-comment">// ... draw Green Cube</span></span>
+<span class="hljs-comment"><span class="hljs-comment">// ... draw Blue Cube</span></span>
+<span class="hljs-comment"><span class="hljs-comment">// ... draw Yellow Cube	  </span></span>
+</code></pre>
+
+          <p>
+            The only uniform we still need to set is the
+            <var>model</var> uniform. Using uniform buffer objects in a scenario
+            like this saves us from quite a few uniform calls per shader. The
+            result looks something like this:
+          </p>
+
+          <img
+            src="./LearnOpenGL - Advanced GLSL_files/advanced_glsl_uniform_buffer_objects.png"
+            class="clean"
+            alt="Image of 4 cubes with their uniforms set via OpenGL&#39;s uniform buffer objects"
+          />
+
+          <p>
+            Each of the cubes is moved to one side of the window by translating
+            the model matrix and, thanks to the different fragment shaders,
+            their colors differ per object. This is a relatively simple scenario
+            of where we could use uniform buffer objects, but any large
+            rendering application can have over hundreds of shader programs
+            active which is where uniform buffer objects really start to shine.
+          </p>
+
+          <p>
+            You can find the full source code of the uniform example application
+            <a
+              href="https://learnopengl.com/code_viewer_gh.php?code=src/4.advanced_opengl/8.advanced_glsl_ubo/advanced_glsl_ubo.cpp"
+              target="_blank"
+              >here</a
+            >.
+          </p>
+
+          <p>
+            Uniform buffer objects have several advantages over single uniforms.
+            First, setting a lot of uniforms at once is faster than setting
+            multiple uniforms one at a time. Second, if you want to change the
+            same uniform over several shaders, it is much easier to change a
+            uniform once in a uniform buffer. One last advantage that is not
+            immediately apparent is that you can use a lot more uniforms in
+            shaders using uniform buffer objects. OpenGL has a limit to how much
+            uniform data it can handle which can be queried with
+            <var>GL_MAX_VERTEX_UNIFORM_COMPONENTS</var>. When using uniform
+            buffer objects, this limit is much higher. So whenever you reach a
+            maximum number of uniforms (when doing skeletal animation for
+            example) there's always uniform buffer objects.
+          </p>
+        </div>
+
+        <div id="hover">HI</div>
+        <!-- 728x90/320x50 sticky footer -->
+        <div id="waldo-sticky-footer-wrapper"></div>
+
+        <div id="disqus_thread">
+          <iframe
+            id="dsq-app6069"
+            name="dsq-app6069"
+            allowtransparency="true"
+            frameborder="0"
+            scrolling="no"
+            tabindex="0"
+            title="Disqus"
+            width="100%"
+            src="./LearnOpenGL - Advanced GLSL_files/saved_resource(1).html"
+            horizontalscrolling="no"
+            verticalscrolling="no"
+            style="
+              width: 1px !important;
+              min-width: 100% !important;
+              border: none !important;
+              overflow: hidden !important;
+              height: 0px !important;
+            "
+          ></iframe>
+        </div>
+      </div>
+      <!-- container div -->
+    </div>
+    <iframe
+      style="display: none"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(8).html"
+    ></iframe>
+    <!-- super container div -->
+
+    <iframe
+      src="./LearnOpenGL - Advanced GLSL_files/sync(3).html"
+      style="display: none; visibility: hidden"
+    ></iframe
+    ><iframe
+      name="__tcfapiLocator"
+      style="display: none"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(9).html"
+    ></iframe>
+    <script>
+      function playDashMovie(
+        defaultPlay,
+        contentId,
+        playlistId,
+        playlistIndex
+      ) {
+        var width = 0;
+        var height = 0;
+
+        // 画面サイズ設定
+        // Cookieから取得
+        var widthCookie = getCookieParam("PC030011_window_width");
+        if (widthCookie != "") {
+          width = parseInt(widthCookie);
+        }
+        var heightCookie = getCookieParam("PC030011_window_height");
+        if (heightCookie != "") {
+          height = parseInt(heightCookie);
+        }
+
+        // Cookieで取得できなかった場合
+        if (width <= 0 || height <= 0) {
+          // 「HD」の場合
+          if (defaultPlay == "4") {
+            width = 1280;
+            height = 720;
+          } else {
+            // HD以外(=SD)は854×486
+            defaultPlay = "3";
+            width = 854;
+            height = 486;
+          }
+        }
+
+        var features =
+          "location=no, menubar=no, status=yes, scrollbars=yes, resizable=yes, toolbar=no";
+
+        if (width) {
+          features += ", width=" + width;
+        }
+
+        if (height) {
+          features += ", height=" + height;
+        }
+
+        // パラメータ設定
+        var url = "/animestore/sc_pc?";
+        var initParamFlag = true;
+        var partId = contentId;
+
+        if (contentId != null && contentId != "") {
+          // contentIdが10桁の場合話IDを切り出す
+          if (contentId.length == 10) {
+            partId = contentId.toString().substr(0, 8);
+          }
+          url += "partId=" + partId;
+          initParamFlag = false;
+        }
+        // playlistIdが設定されていた場合プレイリスト再生
+        if (playlistId != null && playlistId != "") {
+          if (!initParamFlag) {
+            url += "&";
+          }
+          url += "playlistId=" + playlistId;
+          if (playlistIndex != null && playlistIndex != "") {
+            url += "&playlistIndex=" + playlistIndex;
+          }
+        }
+
+        // 途中から再生用再生開始位置(PCでフリーページから途中から再生の場合、作品indexの初期処理(contentIndex_pc.js)で設定済み)
+        // 対象の話IDと一致した場合再生開始位置を更新
+        if (
+          paramPartId != null &&
+          paramPartId == partId &&
+          paramStartPosition != null
+        ) {
+          startPosition = paramStartPosition;
+        }
+
+        // 途中から再生用再生開始位置が設定されている場合
+        if (startPosition != null && startPosition != "") {
+          url += "&startPosition=" + startPosition;
+        }
+
+        window.open(url);
+
+        // 途中から再生用再生開始位置を初期化
+        startPosition = null;
+        paramStartPosition = null;
+      }
+    </script>
+    <iframe
+      name="__tcfapiLocator"
+      style="display: none"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(10).html"
+    ></iframe
+    ><iframe
+      style="display: none"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(11).html"
+    ></iframe
+    ><iframe
+      sandbox="allow-scripts allow-same-origin"
+      id="126ae1528dfea68a"
+      frameborder="0"
+      allowtransparency="true"
+      marginheight="0"
+      marginwidth="0"
+      width="0"
+      hspace="0"
+      vspace="0"
+      height="0"
+      style="height: 0px; width: 0px; display: none !important"
+      scrolling="no"
+      src="./LearnOpenGL - Advanced GLSL_files/cs(1).html"
+    >
+    </iframe
+    ><iframe
+      src="./LearnOpenGL - Advanced GLSL_files/sync(4).html"
+      style="display: none; visibility: hidden"
+    ></iframe
+    ><iframe
+      id="google_osd_static_frame_582660911733"
+      name="google_osd_static_frame"
+      style="display: none; width: 0px; height: 0px"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(12).html"
+    ></iframe>
+    <script src="./LearnOpenGL - Advanced GLSL_files/bundle.js"></script>
+    <iframe
+      style="display: none !important"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(13).html"
+    ></iframe
+    ><iframe
+      style="display: none !important"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(14).html"
+    ></iframe
+    ><iframe
+      style="display: none !important"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(15).html"
+    ></iframe
+    ><iframe
+      style="display: none !important"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(16).html"
+    ></iframe
+    ><iframe
+      style="display: none !important"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(17).html"
+    ></iframe>
+    <script
+      type="text/javascript"
+      src="./LearnOpenGL - Advanced GLSL_files/n.js"
+    ></script>
+    <iframe
+      style="display: none !important"
+      src="./LearnOpenGL - Advanced GLSL_files/saved_resource(18).html"
+    ></iframe>
+  </body>
+  <iframe
+    sandbox="allow-scripts allow-same-origin"
+    id="127b8fb30b5eb7c4"
+    frameborder="0"
+    allowtransparency="true"
+    marginheight="0"
+    marginwidth="0"
+    width="0"
+    hspace="0"
+    vspace="0"
+    height="0"
+    style="height: 0px; width: 0px; display: none"
+    scrolling="no"
+    src="./LearnOpenGL - Advanced GLSL_files/cs(2).html"
+  >
+  </iframe>
+</html>
